@@ -40,6 +40,9 @@ filetype plugin indent on    " required
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Rebind leader
+let mapleader=","
+
 " Racer
 set hidden
 
@@ -113,9 +116,6 @@ set lazyredraw
 " lines)
 nnoremap j gj
 nnoremap k gk
-
-" Rebind leader
-let mapleader=","
 
 " Rebind Escape
 inoremap jk <esc>
