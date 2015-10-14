@@ -1,2 +1,2 @@
 sh ~/.fehbg &
-xmodmap ~/.xmodmap
+xmodmap ~/.xmodmap &
