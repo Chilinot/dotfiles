@@ -59,9 +59,9 @@ set nu
 
 " Theme
 syntax enable
-"set background=dark
+set background=dark
 colorscheme desert
-set t_Co=16
+set t_Co=256
 
 " Autoindent according to line above
 set autoindent
