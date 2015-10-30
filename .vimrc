@@ -118,7 +118,7 @@ nnoremap j gj
 nnoremap k gk
 
 " Rebind Escape
-inoremap jk <esc>
+"inoremap jk <esc>
 
 " Toggle gundo (visual undo tree)
 nnoremap <leader>u :GundoToggle<CR>
