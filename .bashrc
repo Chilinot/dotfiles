@@ -15,3 +15,9 @@ export ALSA_CARD=PCH
 
 # Enable 256 colors in the terminal
 export TERM=konsole-256color
+
+# Visual
+export VISUAL="vim"
+
+# Bind GVIM
+alias gv='gvim'

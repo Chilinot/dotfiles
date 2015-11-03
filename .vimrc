@@ -43,6 +43,11 @@ filetype plugin indent on    " required
 " Rebind leader
 let mapleader=","
 
+" Disable GVIM toolbars etc
+set guioptions-=m  "menu bar
+set guioptions-=T  "toolbar
+set guioptions-=r  "scrollbar
+
 " Racer
 set hidden
 
@@ -61,7 +66,7 @@ set nu
 syntax enable
 set background=dark
 colorscheme desert
-set t_Co=256
+"set t_Co=256
 
 " Autoindent according to line above
 set autoindent
