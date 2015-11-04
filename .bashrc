@@ -21,3 +21,6 @@ export VISUAL="vim"
 
 # Bind GVIM
 alias gv='gvim'
+
+# Load my private key
+alias pk='eval `ssh-agent -s` && ssh-add ~/.ssh/id_rsa'
