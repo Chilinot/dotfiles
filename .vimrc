@@ -64,8 +64,8 @@ set nu
 
 " Theme
 syntax enable
-set background=dark
-colorscheme desert
+"set background=dark
+colorscheme github
 "set t_Co=256
 
 " Autoindent according to line above
@@ -104,9 +104,9 @@ setglobal fileencoding=utf8
 set laststatus=2
 
 " Fonts
-"if has("gui_running")
-"  set guifont=Hack:h9:cANSI
-"endif
+if has("gui_running")
+  set guifont=Hack
+endif
 
 " Backspace fix
 set backspace=2
