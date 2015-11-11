@@ -23,6 +23,9 @@ Plugin 'bling/vim-airline'
 Plugin 'rust-lang/rust.vim'
 Plugin 'phildawes/racer' " Code completion
 
+" Solarized color scheme
+Plugin 'altercation/vim-colors-solarized'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -64,9 +67,9 @@ set nu
 
 " Theme
 syntax enable
-"set background=dark
+set background=dark
 colorscheme github
-"set t_Co=256
+set t_Co=256
 
 " Highlight tabs and trailing spaces
 set listchars=tab:>-,trail:-
