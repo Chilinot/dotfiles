@@ -26,6 +26,9 @@ Plugin 'phildawes/racer' " Code completion
 " Solarized color scheme
 Plugin 'altercation/vim-colors-solarized'
 
+" Autoclose delimiters
+Plugin 'Raimondi/delimitMate'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -62,13 +65,13 @@ else
   let $RUST_SRC_PATH = "~/git/rust/src"
 endif
 
-" Line numbers
-set nu
+" Relative line numbers
+set relativenumber
 
 " Theme
 syntax enable
 set background=dark
-colorscheme github
+colorscheme solarized
 set t_Co=256
 
 " Highlight tabs and trailing spaces
