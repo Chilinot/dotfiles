@@ -236,3 +236,9 @@ bindsym $mod+Control+Shift+k focus parent, focus parent, focus parent, focus par
 
 # Start compton (fixes tearing and other stuff)
 #exec compton -b
+
+# Bluetooth : Power on
+bindsym $mod+Shift+b exec bluetoothctl <<< "power on"
+
+# Bluetooth : Power off
+bindsym $mod+Ctrl+b exec bluetoothctl <<< "power off"
