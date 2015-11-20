@@ -20,8 +20,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 
 " Rust
-Plugin 'rust-lang/rust.vim'
-Plugin 'phildawes/racer' " Code completion
+Plugin 'rust-lang/rust.vim' " Syntax highlight
+Plugin 'phildawes/racer'    " Code completion
 
 " Solarized color scheme
 Plugin 'altercation/vim-colors-solarized'
@@ -65,8 +65,9 @@ else
   let $RUST_SRC_PATH = "~/git/rust/src"
 endif
 
-" Relative line numbers
+" Line numbers
 set relativenumber
+set number
 
 " Theme
 syntax enable
@@ -132,8 +133,8 @@ set lazyredraw
 nnoremap j gj
 nnoremap k gk
 
-" Rebind Escape
-"inoremap jk <esc>
+" Bind Escape
+inoremap åå <esc>
 
 " Toggle gundo (visual undo tree)
 nnoremap <leader>u :GundoToggle<CR>
