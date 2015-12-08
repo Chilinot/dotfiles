@@ -222,7 +222,7 @@ exec_always setxkbmap se
 bindsym $mod+z exec thunar
 
 # Bind Intellij
-bindsym $mod+x exec /home/lucas/IntelliJ/idea-IC-141.2735.5/bin/idea.sh
+bindsym $mod+x exec /home/lucas/IntelliJ/idea-IC-143.382.35/bin/idea.sh
 
 # Bind Chromium
 bindsym $mod+c exec chromium
