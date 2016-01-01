@@ -141,3 +141,9 @@ nnoremap k gk
 
 " Toggle gundo (visual undo tree)
 nnoremap <leader>u :GundoToggle<CR>
+
+" Folding
+nmap <C-F>i :setlocal fdm=indent<CR>
+
+" Remove all trailing whitespaces
+nmap <F2> gg<S-V>G::s/\s*$//g<CR>
