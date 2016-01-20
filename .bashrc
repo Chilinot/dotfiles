@@ -10,6 +10,9 @@ PS1='[\u@\h \W]\$ '
 
 alias ll='ls -laF'
 
+# Set default Qt version
+export QT_SELECT=4
+
 # Set default sound card to PCH
 export ALSA_CARD=PCH
 
