@@ -27,3 +27,6 @@ alias gv='gvim'
 
 # Load my private key
 alias pk='eval `ssh-agent -s` && ssh-add ~/.ssh/id_rsa'
+
+# Apktool
+alias apktool='java -jar ~/apktool-cli.jar'
