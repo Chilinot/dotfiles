@@ -30,3 +30,6 @@ alias pk='eval `ssh-agent -s` && ssh-add ~/.ssh/id_rsa'
 
 # Apktool
 alias apktool='java -jar ~/apktool-cli.jar'
+
+# Default editor
+export EDITOR=vim
