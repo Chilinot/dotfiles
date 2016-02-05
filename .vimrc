@@ -147,3 +147,6 @@ nmap <C-F>i :setlocal fdm=indent<CR>
 
 " Remove all trailing whitespaces
 nmap <F2> gg<S-V>G::s/\s*$//g<CR>
+
+" Kill current buffer without closing window
+nmap <F3> :Bd<CR>
