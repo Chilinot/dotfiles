@@ -33,3 +33,12 @@ alias apktool='java -jar ~/apktool-cli.jar'
 
 # Default editor
 export EDITOR=vim
+
+# Git pull
+alias gp='git pull'
+
+# Git pull --rebase
+alias gpr='git pull --rebase'
+
+# Better git log
+alias gl='git log --pretty=format:"%h %cd - %cn: %s" --graph'
