@@ -82,7 +82,7 @@ colorscheme solarized
 set t_Co=256
 
 " Highlight tabs and trailing spaces
-set listchars=tab:>-,trail:·,eol:$
+set listchars=tab:>-,trail:·
 set list
 
 " Autoindent according to line above
