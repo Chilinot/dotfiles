@@ -225,7 +225,7 @@ bindsym $mod+z exec thunar
 bindsym $mod+x exec /home/lucas/IntelliJ/idea-IC-143.1184.17/bin/idea.sh
 
 # Bind Chromium
-bindsym $mod+c exec chromium
+bindsym $mod+c exec firefox
 
 # Start applets
 exec --no-startup-id nm-applet # Network
