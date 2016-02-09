@@ -153,3 +153,6 @@ nmap <F2> gg<S-V>G::s/\s*$//g<CR>
 
 " Kill current buffer without closing window
 nmap <F3> :Bd<CR>
+
+" Reload the current file
+nmap <F4> :e<CR>
