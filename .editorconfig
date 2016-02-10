@@ -10,12 +10,12 @@ insert_final_newline = true
 charset = utf-8
 
 # 4 space indentation
-[*.{py,rs,rb,rex}]
+[*.{py,rs,rb,rex,txt}]
 indent_style = space
 indent_size = 4
 
 # 2 space indentation
-[*.{c,cpp}]
+[*.{c,cpp,tex}]
 indent_style = space
 indent_size = 2
 
