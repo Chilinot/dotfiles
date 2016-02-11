@@ -156,3 +156,9 @@ nmap <F3> :Bd<CR>
 
 " Reload the current file
 nmap <F4> :e<CR>
+
+" Window keybinds:
+" - Increase window size
+nmap <Up> <C-W>>
+" - Decrease window size
+nmap <Down> <C-W><
