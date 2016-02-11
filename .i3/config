@@ -237,6 +237,9 @@ bindsym $mod+Control+Shift+k focus parent, focus parent, focus parent, focus par
 # Start compton (fixes tearing and other stuff)
 exec_always compton -b
 
+# Fucking xmodmap
+exec_always xmodmap /home/lucas/.xmodmap
+
 # Bluetooth : Power on
 bindsym $mod+Shift+b exec bluetoothctl <<< "power on"
 
