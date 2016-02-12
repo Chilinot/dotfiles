@@ -139,8 +139,11 @@ set lazyredraw
 nnoremap j gj
 nnoremap k gk
 
-" Bind Escape
-"inoremap åå <esc>
+" Bind Escape to AltGr-h
+inoremap ħ <esc>
+
+" Bind :w to AltGr-w
+inoremap ł :w<CR>
 
 " Toggle gundo (visual undo tree)
 nnoremap <leader>u :GundoToggle<CR>
