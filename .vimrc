@@ -165,3 +165,6 @@ nmap <F4> :e<CR>
 nmap <Up> <C-W>>
 " - Decrease window size
 nmap <Down> <C-W><
+
+" Indicate that we are using a fast terminal that can handle more characters
+set ttyfast
