@@ -214,9 +214,11 @@ mode "$mode_system" {
 
 bindsym $mod+Pause mode "$mode_system"
 
-
-# Set keyboard to swedish
+# Set keyboard layout to swedish
 exec_always setxkbmap se
+
+# Reload xmodmap after setting keyboard layout
+exec_always xmodmap /home/lucas/.xmodmap
 
 # Bind file manager
 bindsym $mod+z exec thunar
@@ -224,7 +226,7 @@ bindsym $mod+z exec thunar
 # Bind Intellij
 bindsym $mod+x exec /home/lucas/IntelliJ/idea-IC-143.1184.17/bin/idea.sh
 
-# Bind Chromium
+# Bind Browser
 bindsym $mod+c exec firefox
 
 # Start applets
@@ -237,11 +239,5 @@ bindsym $mod+Control+Shift+k focus parent, focus parent, focus parent, focus par
 # Start compton (fixes tearing and other stuff)
 exec_always compton -b
 
-# Fucking xmodmap
-exec_always xmodmap /home/lucas/.xmodmap
-
-# Bluetooth : Power on
-bindsym $mod+Shift+b exec bluetoothctl <<< "power on"
-
-# Bluetooth : Power off
-bindsym $mod+Ctrl+b exec bluetoothctl <<< "power off"
+# Bluetooth
+bindsym $mod+Shift+b exec /home/lucas/.i3/togglebluetooth.sh
