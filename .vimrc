@@ -78,11 +78,11 @@ set number
 " Theme
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme torte
 set t_Co=256
 
 " Highlight tabs and trailing spaces
-set listchars=tab:>-,trail:·
+set listchars=tab:> ,trail:·
 set list
 
 " Autoindent according to line above
