@@ -35,6 +35,15 @@ Plugin 'msanders/snipmate.vim'
 " EditorConfig
 Plugin 'editorconfig/editorconfig-vim'
 
+" Syntastic (syntax checker)
+Plugin 'scrooloose/syntastic'
+
+" Tabular, indenting stuff with style
+Plugin 'godlygeek/tabular'
+
+" Markdown syntax hightlight
+Plugin 'plasticboy/vim-markdown'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -119,6 +128,7 @@ setglobal fileencoding=utf8
 
 " Airline
 set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
 
 " Fonts
 if has("gui_running")
@@ -168,3 +178,13 @@ nmap <Down> <C-W><
 
 " Indicate that we are using a fast terminal that can handle more characters
 set ttyfast
+
+" Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
