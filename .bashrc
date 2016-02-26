@@ -45,3 +45,6 @@ alias gpr='git pull --rebase'
 
 # Better git log
 alias gl='git log --pretty=format:"%h %cd - %cn: %s" --graph'
+
+# JD-GUI
+alias jd='java -jar ~/jd-gui-1.4.0.jar'
