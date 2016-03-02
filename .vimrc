@@ -206,3 +206,6 @@ let g:airline_powerline_fonts = 1
 " - Enable c++11 support
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+
+" Split vertically as default
+set splitright
