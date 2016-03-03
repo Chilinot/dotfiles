@@ -15,7 +15,7 @@ indent_style = space
 indent_size = 4
 
 # 2 space indentation
-[*.{c,cpp,tex}]
+[*.{c,cpp,tex,cl}]
 indent_style = space
 indent_size = 2
 
