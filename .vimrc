@@ -184,8 +184,9 @@ nmap <F3> :Bd<CR>
 " Reload the current file
 nmap <F4> :e<CR>
 
-" Reformat the current file using astyle
-nmap <F5> :!astyle --style=google %
+" Reformat the current file using astyle, then reload and correct indentation
+" according to what is defined in vim/.editorconfig
+nmap <F5> :!astyle --style=google %<CR>:e %<CR>gg=G
 
 " Window keybinds:
 " - Increase window size
