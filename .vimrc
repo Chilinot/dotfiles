@@ -144,7 +144,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Fonts
 if has("gui_running")
-  set guifont=Hack
+  set guifont=Hack\ 9
 endif
 
 " Backspace fix
@@ -172,6 +172,8 @@ nnoremap <leader>u :GundoToggle<CR>
 
 " Folding
 nmap <C-F>i :setlocal fdm=indent<CR>
+nmap <C-F>s :setlocal fdm=syntax<CR>
+nmap ff zA
 
 " Remove all trailing whitespaces
 nmap <F2> gg<S-V>G::s/\s*$//g<CR>
@@ -181,6 +183,9 @@ nmap <F3> :Bd<CR>
 
 " Reload the current file
 nmap <F4> :e<CR>
+
+" Reformat the current file using astyle
+nmap <F5> :!astyle --style=google %
 
 " Window keybinds:
 " - Increase window size
