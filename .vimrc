@@ -50,6 +50,9 @@ Plugin 'tpope/vim-fugitive'
 " Git - shows changes in editor
 Plugin 'airblade/vim-gitgutter'
 
+" OpenCL
+Plugin 'petRUShka/vim-opencl'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -210,8 +213,8 @@ let g:syntastic_check_on_wq = 0
 let g:airline_powerline_fonts = 1
 
 " - Enable c++11 support
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+let g:syntastic_cpp_compiler = 'g++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
 " Split vertically as default
 set splitright
