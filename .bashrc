@@ -48,3 +48,6 @@ alias gl='git log --pretty=format:"%h %cd - %cn: %s" --graph'
 
 # JD-GUI
 alias jd='java -jar ~/jd-gui-1.4.0.jar'
+
+# Load private settings (stuff that you shits should not know about!)
+. ~/.private_bashrc
