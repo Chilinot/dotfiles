@@ -5,3 +5,4 @@ nmap K gt
 autocmd LocationChange .*                  js modes.passAllKeys = false
 autocmd LocationChange docs\\.google\\.com js modes.passAllKeys = true
 autocmd LocationChange overleaf\\.com      js modes.passAllKeys = true
+autocmd LocationChange sharelatex\\.com    js modes.passAllKeys = true
