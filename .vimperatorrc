@@ -2,6 +2,6 @@ nmap J gT
 nmap K gt
 
 " Ignore the following pages
-autocmd LocationChange .*                      js modes.passAllKeys = false
-autocmd LocationChange calendar\\.google\\.com js modes.passAllKeys = true
-autocmd LocationChange overleaf\\.com          js modes.passAllKeys = true
+autocmd LocationChange .*                  js modes.passAllKeys = false
+autocmd LocationChange docs\\.google\\.com js modes.passAllKeys = true
+autocmd LocationChange overleaf\\.com      js modes.passAllKeys = true
