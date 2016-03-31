@@ -237,7 +237,7 @@ exec --no-startup-id pa-applet # PulseAudio
 bindsym $mod+Control+Shift+k focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, kill
 
 # Start compton (fixes tearing and other stuff)
-exec_always --no-startup-id compton -b
+exec_always --no-startup-id compton -b --no-fading-openclose
 
 # Bluetooth
 bindsym $mod+Shift+b exec --no-startup-id /home/lucas/.i3/togglebluetooth.sh
