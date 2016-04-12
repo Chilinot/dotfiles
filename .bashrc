@@ -37,17 +37,30 @@ alias apktool='java -jar ~/apktool-cli.jar'
 # Default editor
 export EDITOR=vim
 
-# Git pull
+# GIT
+# - Git pull
 alias gp='git pull'
 
-# Git pull --rebase
+# - Git pull --rebase
 alias gpr='git pull --rebase'
 
-# Better git log
-alias gl='git log --pretty=format:"%h %cd - %cn: %s" --graph'
+# - Git log
+alias gl='git log --pretty=format:"%h$%ci$%cn$%G?: %s" --graph | column -t -s $'
+
+# - Git commit
+alias gc='git commit -S -m'
+
+# - Git add
+alias ga='git add'
 
 # JD-GUI
 alias jd='java -jar ~/jd-gui-1.4.0.jar'
 
 # Load private settings (stuff that you shits should not know about!)
 . ~/.private_bashrc
+
+# Computer Graphics course
+export ASSIGNMENT1_ROOT=$HOME/Syncthing/Sync/Skola/UU/Computer\ Graphics/assignment1
+export ASSIGNMENT2_ROOT=$HOME/Syncthing/Sync/Skola/UU/Computer\ Graphics/assignment2
+export ASSIGNMENT3_ROOT=$HOME/Syncthing/Sync/Skola/UU/Computer\ Graphics/assignment3
+export ASSIGNMENT4_ROOT=$HOME/Syncthing/Sync/Skola/UU/Computer\ Graphics/assignment4

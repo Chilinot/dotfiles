@@ -59,6 +59,12 @@ Plugin 'chrisbra/unicode.vim'
 " Arduino
 Plugin 'jplaut/vim-arduino-ino' " Ino wrapper
 
+" Language pack
+Plugin 'sheerun/vim-polyglot'
+
+" GLSL addition to Polyglot
+Plugin 'tikhomirov/vim-glsl'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -218,9 +224,20 @@ let g:syntastic_check_on_wq = 0
 
 let g:airline_powerline_fonts = 1
 
+" - Disable automatic checking and map manual check
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+nnoremap <leader>c :SyntasticCheck<CR>
+nnoremap <leader>s :SyntasticToggleMode<CR>
+
 " - Enable c++11 support
 let g:syntastic_cpp_compiler = 'g++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
-" Split vertically as default
+" - Define c++ syntax checker
+"let g:syntastic_cpp_checkers = ['clang_tidy']
+
+" Split vertically as default (used for cscope)
 set splitright
+
+" Polyglot-pack ignores these files
+let g:polyglot_disabled = ['rust']

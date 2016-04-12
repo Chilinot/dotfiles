@@ -10,7 +10,7 @@ insert_final_newline = true
 charset = utf-8
 
 # 4 space indentation
-[*.{py,rs,rb,rex,txt,vim}]
+[*.{py,rs,rb,rex,txt,vim,xml}]
 indent_style = space
 indent_size = 4
 
