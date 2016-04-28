@@ -241,3 +241,6 @@ exec_always --no-startup-id compton -b --no-fading-openclose
 
 # Bluetooth
 bindsym $mod+Shift+b exec --no-startup-id /home/lucas/.i3/togglebluetooth.sh
+
+# Bind print-screen
+bindsym Print exec scrot
