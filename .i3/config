@@ -217,8 +217,8 @@ bindsym $mod+Pause mode "$mode_system"
 # Set keyboard layout to swedish
 exec_always --no-startup-id setxkbmap se
 
-# Reload xmodmap after setting keyboard layout
-#exec_always --no-startup-id xmodmap /home/lucas/.Xmodmap
+# Reload xmodmap after setting keyboard layout (this has to be delayed by a couple of seconds to stop data-races between this and setxkbmap)
+exec_always --no-startup-id "sleep 3 && xmodmap /home/lucas/.Xmodmap"
 
 # Bind file manager
 bindsym $mod+z exec thunar
