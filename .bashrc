@@ -51,7 +51,7 @@ alias gl='git log --pretty=format:"%h$%ci$%cn$%G?: %s" --graph | column -t -s "$
 alias gc='git commit -S -m'
 
 # - Git add
-alias ga='git add'
+alias ga='git add -p'
 
 # JD-GUI
 alias jd='java -jar ~/jd-gui-1.4.0.jar'
