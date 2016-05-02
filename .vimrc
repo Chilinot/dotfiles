@@ -85,6 +85,14 @@ filetype plugin indent on    " required
 " Rebind leader
 let mapleader=","
 
+" Bind escape for all modes
+noremap  <leader><leader> <Esc>
+noremap! <leader><leader> <Esc>
+
+" Bind Write for all modes
+noremap <leader>. :w<CR>
+noremap! <leader>. :w<CR>
+
 " Disable GVIM toolbars etc
 set guioptions-=m  "menu bar
 set guioptions-=T  "toolbar
@@ -204,10 +212,14 @@ nmap <F4> :e<CR>
 nmap <F5> :!astyle --style=google %<CR>:e %<CR>gg=G
 
 " Window keybinds:
-" - Increase window size
-nmap <Up> <C-W>>
-" - Decrease window size
-nmap <Down> <C-W><
+" - Increase window width
+nmap <Right> <C-W>>
+" - Decrease window width
+nmap <Left> <C-W><
+" - Increase window height
+nmap <Up> :resize +1<CR>
+" - Decrease window height
+nmap <Down> :resize -1<CR>
 
 " Indicate that we are using a fast terminal that can handle more characters
 set ttyfast
