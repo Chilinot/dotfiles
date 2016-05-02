@@ -60,7 +60,7 @@ alias jd='java -jar ~/jd-gui-1.4.0.jar'
 . ~/.private_bashrc
 
 # Computer Graphics course
-export ASSIGNMENT1_ROOT=$HOME/Syncthing/Sync/Skola/UU/Computer\ Graphics/assignment1
-export ASSIGNMENT2_ROOT=$HOME/Syncthing/Sync/Skola/UU/Computer\ Graphics/assignment2
-export ASSIGNMENT3_ROOT=$HOME/Syncthing/Sync/Skola/UU/Computer\ Graphics/assignment3
-export ASSIGNMENT4_ROOT=$HOME/Syncthing/Sync/Skola/UU/Computer\ Graphics/assignment4
+export ASSIGNMENT1_ROOT=$HOME/git/computer_graphics/assignment1
+export ASSIGNMENT2_ROOT=$HOME/git/computer_graphics/assignment2
+export ASSIGNMENT3_ROOT=$HOME/git/computer_graphics/assignment3
+export ASSIGNMENT4_ROOT=$HOME/git/computer_graphics/assignment4
