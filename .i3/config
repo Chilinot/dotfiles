@@ -188,7 +188,8 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
 # Touchpad controls
-bindsym $mod+Shift+t exec --no-startup-id /home/lucas/.i3/toggletouchpad.sh # toggle touchpad
+bindsym $mod+Shift+t exec --no-startup-id /home/lucas/.i3/toggletouchpad.sh # Toggle touchpad
+exec --no-startup-id /home/lucas/.i3/toggletouchpad.sh                      # Disable touchpad by default
 
 # Media player controls
 bindsym $mod+Down exec playerctl play-pause
