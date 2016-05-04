@@ -6,8 +6,9 @@ root = true
 # General settings for all files
 [*]
 end_of_line = lf
-insert_final_newline = true
+insert_final_newline = false
 charset = utf-8
+trim_trailing_whitespace = true
 
 # 4 space indentation
 [*.{py,rs,rb,rex,txt,vim,xml,frag,vert}]
