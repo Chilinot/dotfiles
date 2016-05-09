@@ -54,7 +54,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'petRUShka/vim-opencl'
 
 " Unicode
-Plugin 'chrisbra/unicode.vim'
+"Plugin 'chrisbra/unicode.vim'
 
 " Arduino
 Plugin 'jplaut/vim-arduino-ino' " Ino wrapper
