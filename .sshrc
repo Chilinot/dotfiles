@@ -1,0 +1,23 @@
+alias ll='ls -laF'
+
+# Visual
+export VISUAL="vim"
+
+# Default editor
+export EDITOR=vim
+
+# GIT
+# - Git pull
+alias gp='git pull'
+
+# - Git pull --rebase
+alias gpr='git pull --rebase'
+
+# - Git log
+alias gl='git log --pretty=format:"%h$%ci$%cn$%G?: %s" --graph | column -t -s "$" | more'
+
+# - Git commit
+alias gc='git commit -S -m'
+
+# - Git add
+alias ga='git add -p'
