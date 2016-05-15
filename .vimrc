@@ -83,15 +83,14 @@ filetype plugin indent on    " required
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Rebind leader
-let mapleader=","
+let mapleader=" "
 
 " Bind escape for all modes
-noremap  <leader><leader> <Esc>
-noremap! <leader><leader> <Esc>
+noremap  ,, <Esc>
+noremap! ,, <Esc>
 
-" Bind Write for all modes
-noremap <leader>. :w<CR>
-noremap! <leader>. :w<CR>
+" Bind Write
+noremap <leader>w :w<CR>
 
 " Disable GVIM toolbars etc
 set guioptions-=m  "menu bar
