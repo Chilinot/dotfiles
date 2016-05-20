@@ -86,8 +86,9 @@ filetype plugin indent on    " required
 let mapleader=" "
 
 " Bind escape for all modes
-noremap  ,, <Esc>
-noremap! ,, <Esc>
+"noremap  ,, <Esc>
+"noremap! ,, <Esc>
+inoremap ,, <Esc>
 
 " Bind Write
 noremap <leader>w :w<CR>
