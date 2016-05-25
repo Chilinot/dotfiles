@@ -173,7 +173,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     status_command i3status -c /home/lucas/.i3/i3status.conf
-    
+
     # show tray icons on the primary monitor
     tray_output eDP1
 }
@@ -206,7 +206,7 @@ mode "$mode_system" {
     bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
     bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -245,3 +245,9 @@ bindsym $mod+Shift+b exec --no-startup-id /home/lucas/.i3/togglebluetooth.sh
 
 # Bind print-screen
 bindsym Print exec scrot
+
+# Automatically open apps on workspaces
+#exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/konsole'
+#exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/gvim'
+#exec --no-startup-id i3-msg 'workspace 9; exec /usr/bin/thunderbird'
+#exec --no-startup-id i3-msg 'workspace 10; exec /usr/bin/firefox'
