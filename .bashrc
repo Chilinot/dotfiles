@@ -63,4 +63,4 @@ alias jd='java -jar ~/jd-gui-1.4.0.jar'
 export ASSIGNMENT1_ROOT=$HOME/git/computer_graphics/assignment1
 export ASSIGNMENT2_ROOT=$HOME/git/computer_graphics/assignment2
 export ASSIGNMENT3_ROOT=$HOME/git/computer_graphics/assignment3
-export ASSIGNMENT4_ROOT=$HOME/git/computer_graphics/assignment4
+export PROJECT_ROOT=$HOME/git/computer_graphics/project
