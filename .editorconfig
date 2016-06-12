@@ -9,7 +9,7 @@ charset = utf-8
 trim_trailing_whitespace = true
 
 # 4 space indentation
-[*.{py,rs,rb,rex,txt,vim,xml,frag,vert}]
+[*.{py,rs,rb,rex,txt,vim,xml,frag,vert,sh}]
 indent_style = space
 indent_size = 4
 
