@@ -65,6 +65,10 @@ Plugin 'sheerun/vim-polyglot'
 " GLSL addition to Polyglot
 Plugin 'tikhomirov/vim-glsl'
 
+" LLVM
+"Plugin 'garious/vim-llvm'
+Plugin 'tommyvagbratt/vim-llvm'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
