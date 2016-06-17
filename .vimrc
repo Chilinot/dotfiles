@@ -93,6 +93,7 @@ let mapleader=" "
 "noremap  ,, <Esc>
 "noremap! ,, <Esc>
 inoremap ,, <Esc>
+vnoremap ,, <Esc>
 
 " Bind Write
 noremap <leader>w :w<CR>
