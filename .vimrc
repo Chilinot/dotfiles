@@ -162,8 +162,8 @@ nmap <C-J> o<Esc>
 nmap <F1> :NERDTree<CR>
 
 " Change buffer
-nmap <C-L> :bnext<CR>
-nmap <C-H> :bprevious<CR>
+nmap <C-L> :tabnext<CR>
+nmap <C-H> :tabprevious<CR>
 
 " Kill buffer without closing window layout
 command Bd bp | sp | bn | bd
