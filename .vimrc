@@ -69,6 +69,9 @@ Plugin 'tikhomirov/vim-glsl'
 "Plugin 'garious/vim-llvm'
 Plugin 'tommyvagbratt/vim-llvm'
 
+" Goyo (read mode)
+Plugin 'junegunn/goyo.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
