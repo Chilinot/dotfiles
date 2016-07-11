@@ -264,3 +264,7 @@ set splitright
 
 " Polyglot-pack ignores these files
 let g:polyglot_disabled = ['rust']
+
+" Enable persistent undo-trees, creates a new file "file.txt.un~" besides the
+" edited file that contains the tree.
+set undofile
