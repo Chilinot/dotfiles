@@ -73,7 +73,7 @@ Plugin 'tommyvagbratt/vim-llvm'
 Plugin 'junegunn/goyo.vim'
 
 " Encore
-Plugin 'TheGrandmother/vimcore'
+Plugin 'Chilinot/vimcore'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -268,3 +268,5 @@ let g:polyglot_disabled = ['rust']
 " Enable persistent undo-trees, creates a new file "file.txt.un~" besides the
 " edited file that contains the tree.
 set undofile
+
+nmap <leader>p :!git commit -a -m "testing" && git push <cr><cr>
