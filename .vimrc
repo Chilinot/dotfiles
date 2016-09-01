@@ -134,10 +134,11 @@ set relativenumber
 set number
 
 " Theme
-set t_Co=256        " Enable 256 colors
-syntax enable       " Enable syntax higlight
-set background=dark " Define background brightness
+set t_Co=256          " Enable 256 colors
+syntax enable         " Enable syntax higlight
+set background=dark   " Define background brightness
 colorscheme lucius
+LuciusDarkLowContrast " Define what version of the lucius scheme to use
 
 " Highlight tabs and trailing spaces
 set listchars=tab:> ,trail:·
