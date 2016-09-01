@@ -98,6 +98,9 @@ filetype plugin indent on    " required
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Indicate that we are using a fast terminal that can handle more characters
+set ttyfast
+
 " Rebind leader
 let mapleader=" "
 
@@ -237,9 +240,6 @@ nmap <Left> <C-W><
 nmap <Up> :resize +1<CR>
 " - Decrease window height
 nmap <Down> :resize -1<CR>
-
-" Indicate that we are using a fast terminal that can handle more characters
-set ttyfast
 
 " Syntastic settings
 set statusline+=%#warningmsg#
