@@ -198,12 +198,6 @@ set lazyredraw
 nnoremap j gj
 nnoremap k gk
 
-" Bind Escape to AltGr-h
-inoremap ħ <esc>
-
-" Bind :w to AltGr-w
-inoremap ł :w<CR>
-
 " Toggle gundo (visual undo tree)
 nnoremap <leader>u :GundoToggle<CR>
 
@@ -212,18 +206,11 @@ nmap <C-F>i :setlocal fdm=indent<CR>
 nmap <C-F>s :setlocal fdm=syntax<CR>
 nmap ff zA
 
-" Remove all trailing whitespaces
-nmap <F2> gg<S-V>G::s/\s*$//g<CR>
-
 " Kill current buffer without closing window
 nmap <F3> :Bd<CR>
 
 " Reload the current file
 nmap <F4> :e<CR>
-
-" Reformat the current file using astyle, then reload and correct indentation
-" according to what is defined in vim/.editorconfig
-nmap <F5> :!astyle --style=google %<CR>:e %<CR>gg=G
 
 " Window keybinds:
 " - Increase window width
@@ -269,4 +256,5 @@ let g:polyglot_disabled = ['rust']
 " edited file that contains the tree.
 set undofile
 
+" Crap command used for fast pushing to garbage repo
 nmap <leader>p :!git commit -a -m "testing" && git push <cr><cr>
