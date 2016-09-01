@@ -72,8 +72,14 @@ Plugin 'tommyvagbratt/vim-llvm'
 " Goyo (read mode)
 Plugin 'junegunn/goyo.vim'
 
-" Encore
+" Encore syntax
 Plugin 'Chilinot/vimcore'
+
+" Look inside registers
+Plugin 'junegunn/vim-peekaboo'
+
+" Lucius color scheme
+Plugin 'jonathanfilip/vim-lucius'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
