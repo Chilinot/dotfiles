@@ -105,8 +105,6 @@ set ttyfast
 let mapleader=" "
 
 " Bind escape for all modes
-"noremap  ,, <Esc>
-"noremap! ,, <Esc>
 inoremap ,, <Esc>
 vnoremap ,, <Esc>
 
@@ -179,6 +177,7 @@ setglobal fileencoding=utf8
 " Airline
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " Fonts
 if has("gui_running")
@@ -205,7 +204,7 @@ nnoremap <leader>u :GundoToggle<CR>
 " Folding
 nmap <C-F>i :setlocal fdm=indent<CR>
 nmap <C-F>s :setlocal fdm=syntax<CR>
-nmap ff zA
+nmap ff za
 
 " Kill current buffer without closing window
 nmap <F3> :Bd<CR>
@@ -224,25 +223,23 @@ nmap <Up> :resize +1<CR>
 nmap <Down> :resize -1<CR>
 
 " Syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:airline_powerline_fonts = 1
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
 " - Disable automatic checking and map manual check
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-nnoremap <leader>c :SyntasticCheck<CR>
-nnoremap <leader>s :SyntasticToggleMode<CR>
+"let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+"nnoremap <leader>c :SyntasticCheck<CR>
+"nnoremap <leader>s :SyntasticToggleMode<CR>
 
 " - Enable c++11 support
-let g:syntastic_cpp_compiler = 'g++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11'
+"let g:syntastic_cpp_compiler = 'g++'
+"let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
 " - Define c++ syntax checker
 "let g:syntastic_cpp_checkers = ['clang_tidy']
