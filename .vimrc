@@ -134,16 +134,10 @@ set relativenumber
 set number
 
 " Theme
-syntax enable
-set background=dark
-
-if has("gui_running")
-  colorscheme desert
-else
-  colorscheme torte
-endif
-
-set t_Co=256
+set t_Co=256        " Enable 256 colors
+syntax enable       " Enable syntax higlight
+set background=dark " Define background brightness
+colorscheme lucius
 
 " Highlight tabs and trailing spaces
 set listchars=tab:> ,trail:·
