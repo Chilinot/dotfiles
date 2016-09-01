@@ -30,13 +30,13 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'Raimondi/delimitMate'
 
 " Snippets, tab-insert
-Plugin 'msanders/snipmate.vim'
+"Plugin 'msanders/snipmate.vim'
 
 " EditorConfig
 Plugin 'editorconfig/editorconfig-vim'
 
 " Syntastic (syntax checker)
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 
 " Tabular, indenting stuff with style
 Plugin 'godlygeek/tabular'
