@@ -11,7 +11,7 @@ export PATH=$PATH:$HOME/.gem/ruby/2.3.0/bin
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-alias ll='ls -laF'
+alias ll='ls -lF'
 
 # Set default Qt version
 export QT_SELECT=4
