@@ -112,7 +112,7 @@ inoremap ,, <Esc>
 vnoremap ,, <Esc>
 
 " Bind Write
-noremap <leader>w :w<CR>
+noremap <leader>s :w<CR>
 
 " Disable GVIM toolbars etc
 set guioptions-=m  "menu bar
