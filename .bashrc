@@ -12,6 +12,7 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 alias ll='ls -lF'
+alias lla='ls -laF'
 
 # Set default Qt version
 export QT_SELECT=4
