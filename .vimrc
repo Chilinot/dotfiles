@@ -84,6 +84,9 @@ Plugin 'jonathanfilip/vim-lucius'
 " Vimwiki - todonotes and such
 Plugin 'vimwiki/vimwiki'
 
+" Multiple cursors like a boss
+Plugin 'terryma/vim-multiple-cursors'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
