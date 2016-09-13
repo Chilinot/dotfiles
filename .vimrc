@@ -24,7 +24,7 @@ Plugin 'rust-lang/rust.vim' " Syntax highlight
 Plugin 'phildawes/racer'    " Code completion
 
 " Solarized color scheme
-Plugin 'altercation/vim-colors-solarized'
+"Plugin 'altercation/vim-colors-solarized'
 
 " Autoclose delimiters
 Plugin 'Raimondi/delimitMate'
