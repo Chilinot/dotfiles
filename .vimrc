@@ -20,8 +20,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 
 " Rust
-Plugin 'rust-lang/rust.vim' " Syntax highlight
-Plugin 'phildawes/racer'    " Code completion
+"Plugin 'rust-lang/rust.vim' " Syntax highlight
+"Plugin 'phildawes/racer'    " Code completion
 
 " Solarized color scheme
 "Plugin 'altercation/vim-colors-solarized'
@@ -127,15 +127,15 @@ set guioptions-=T  "toolbar
 set guioptions-=r  "scrollbar
 
 " Racer
-set hidden
-
-if has('win32') || has('win64')
-  let g:racer_cmd = 'C:/Users/Lucas/.vim/bundle/racer/target/release.exe'
-  let $RUST_SRC_PATH = "C:/Users/Lucas/Git/rust/src"
-else
-  let g:racer_cmd = "~/.vim/bundle/racer/target/release"
-  let $RUST_SRC_PATH = "~/git/rust/src"
-endif
+"set hidden
+"
+"if has('win32') || has('win64')
+"  let g:racer_cmd = 'C:/Users/Lucas/.vim/bundle/racer/target/release.exe'
+"  let $RUST_SRC_PATH = "C:/Users/Lucas/Git/rust/src"
+"else
+"  let g:racer_cmd = "~/.vim/bundle/racer/target/release"
+"  let $RUST_SRC_PATH = "~/git/rust/src"
+"endif
 
 " Line numbers
 set relativenumber
@@ -258,7 +258,8 @@ nmap <Down> :resize -1<CR>
 set splitright
 
 " Polyglot-pack ignores these files
-let g:polyglot_disabled = ['rust']
+" COMMENTED OUT WHEN RUST PLUGINS WHERE DISABLED!
+"let g:polyglot_disabled = ['rust']
 
 " Enable persistent undo-trees, creates a new file "file.txt.un~" besides the
 " edited file that contains the tree.
