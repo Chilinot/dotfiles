@@ -18,7 +18,7 @@ status_net() {
         local quality=$(echo "$net" | perl -ne 'print "$1 " if /Quality=([^ ]+)/')
         json wifi "W: $quality$ssid"
     fi
-    local ip=$(echo "$net" | perl -ne 'if (/^[w|e]/../^$/) { print $1 if /inet ([^ ]+)/ }')
+    local ip=$(echo "$net" | perl -ne 'if (/^[w|e]/../^$/) { print "$1 " if /inet ([^ ]+)/ }')
     [[ -n $ip ]] && json ip "I: $ip"
 }
 
@@ -33,17 +33,19 @@ status_bat() {
     if [[ -n "$bat_full" ]]; then
         local bat=$((100*bat_now/bat_full))
 
+	local tleft=$(upower -i $(upower -e | grep BAT) | grep --color=never -E "to\ empty" | awk '{print $4 " " $5}')
         local ac=''
         local color='#00ff00'
         if [[ $(cat /sys/class/power_supply/ADP1/online) == '1' ]]; then
             ac=' AC'
+            tleft=''
         elif ((bat < 25)); then
             color='#ff0000'
         elif ((bat < 50)); then
             color='#ffff00'
         fi
 
-        json bat "B: $bat%$ac" "$color"
+        json bat "B: $bat%$ac $tleft" "$color"
     fi
 }
 
@@ -60,8 +62,8 @@ status_qubes() {
 }
 
 status_disk() {
-    local disk=`df -h / | tail -n 1 | awk '{print $4}'`
-    json disk "D: $disk"
+    local disk=`df -h / | tail -n 1 | awk '{print "[Disk] Free: " $4 ", Usage: " $5}'`
+    json disk "$disk"
 }
 
 main() {
@@ -73,7 +75,7 @@ main() {
         if (( n % 10 == 0 )); then
             local qubes=$(status_qubes)
             local net=$(status_net)
-            #local disk=$(status_disk)
+            local disk=$(status_disk)
             local bat=$(status_bat)
             local load=$(status_load)
         fi
