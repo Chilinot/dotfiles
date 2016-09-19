@@ -46,7 +46,8 @@ alias gp='git pull'
 alias gpr='git pull --rebase'
 
 # - Git log
-alias gl='git log --pretty=format:"%h$%ai$%cn$%G?: %s" --graph | column -t -s "$" | less'
+#alias gl='git log --pretty=format:"%h$%ai$%cn$%G?: %s" --graph | column -t -s "$" | less'
+alias gl='git log --all --decorate --oneline --graph --date=relative'
 
 # - Git commit
 alias gc='git commit -S -m'
