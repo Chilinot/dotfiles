@@ -20,5 +20,5 @@ indent_style = space
 indent_size = 2
 
 # Tab indentation (no size specified)
-[{Makefile,*.java}]
+[Makefile,*.{java,R}]
 indent_style = tab
