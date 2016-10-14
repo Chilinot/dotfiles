@@ -10,7 +10,7 @@ trim_trailing_whitespace = true
 tab_width = 4
 
 # 4 space indentation
-[*.{py,rs,rb,rex,txt,vim,xml,frag,vert,sh,enc}]
+[*.{java,py,rs,rb,rex,txt,vim,xml,frag,vert,sh,enc}]
 indent_style = space
 indent_size = 4
 
@@ -20,5 +20,5 @@ indent_style = space
 indent_size = 2
 
 # Tab indentation (no size specified)
-[Makefile,*.{java,R}]
+[Makefile,*.{R}]
 indent_style = tab

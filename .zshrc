@@ -33,3 +33,5 @@ alias ga='git add -p'
 
 # Use Vimx instaed of regular vim (in order to access system clipboard)
 alias vim='vimx'
+
+alias lla='ll -a'
