@@ -266,6 +266,7 @@ set splitright
 " Enable persistent undo-trees, creates a new file "file.txt.un~" besides the
 " edited file that contains the tree.
 set undofile
+set undodir=~/.vim/undofiles
 
 " Crap command used for fast pushing to garbage repo
 nmap <leader>p :!git commit -a -m "testing" && git push <cr><cr>
