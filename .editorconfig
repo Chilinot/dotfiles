@@ -8,6 +8,7 @@ insert_final_newline = false
 charset = utf-8
 trim_trailing_whitespace = true
 tab_width = 4
+indent_size = tab
 
 # 4 space indentation
 [*.{erl,js,py,rs,rb,rex,txt,vim,frag,vert,sh,enc}]
