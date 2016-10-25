@@ -148,7 +148,7 @@ colorscheme lucius
 LuciusDarkLowContrast  " Define what version of the lucius scheme to use
 
 " Highlight tabs and trailing spaces
-set listchars=tab:> ,trail:·
+set listchars=tab:\| ,trail:·
 set list
 
 " Autoindent according to line above
