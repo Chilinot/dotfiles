@@ -83,3 +83,10 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Always use vimx instead of regular vim
+alias vim='vimx'
+
+# Git
+alias gap='ga -p' # git add -p
+alias gc='git commit -m'
