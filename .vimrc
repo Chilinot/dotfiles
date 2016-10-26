@@ -91,6 +91,9 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'xolox/vim-misc'    " Required for the plugin
 Plugin 'xolox/vim-session' " The actual plugin
 
+" Easymotion
+Plugin 'easymotion/vim-easymotion'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
