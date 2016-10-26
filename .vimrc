@@ -166,7 +166,7 @@ set showcmd
 " Searching
 set incsearch " Search as you type
 set hlsearch " Highlights matchers
-nnoremap <leader><space> :nohlsearch<CR> " Remove highlight
+nnoremap <leader>n :nohlsearch<CR> " Remove highlight
 
 " Better insert of new line
 nmap <C-K> O<Esc>
