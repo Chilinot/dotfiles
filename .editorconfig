@@ -11,7 +11,7 @@ tab_width = 4
 indent_size = tab
 
 # 4 space indentation
-[*.{erl,js,py,rs,rb,rex,txt,vim,frag,vert,sh,enc}]
+[*.{erl,js,rs,rb,rex,txt,vim,frag,vert,sh,enc}]
 indent_style = space
 indent_size = 4
 
@@ -21,5 +21,5 @@ indent_style = space
 indent_size = 2
 
 # Tab indentation (no size specified)
-[{M,m}akefile,*.{xml,html,java,R}]
+[{M,m}akefile,*.{py,xml,html,java,R}]
 indent_style = tab
