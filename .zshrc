@@ -91,3 +91,5 @@ alias gc='git commit -m'
 # General
 # - Always use nvim instead of regular vim
 alias vim='nvim'
+# - ls -lah
+alias lla='ll -a'
