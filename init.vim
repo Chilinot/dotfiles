@@ -1,3 +1,85 @@
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=/home/user/.config/nvim/dein/repos/github.com/Shougo/dein.vim
+
+" Required:
+call dein#begin('/home/user/.config/nvim/dein')
+
+" Let dein manage dein
+" Required:
+call dein#add('Shougo/dein.vim')
+
+" Add or remove your plugins here:
+"call dein#add('Shougo/neosnippet.vim')
+"call dein#add('Shougo/neosnippet-snippets')
+
+" You can specify revision/branch/tag.
+"call dein#add('Shougo/neosnippet-snippets')
+
+" Begin Tools ===================================
+" mundo (fork of gundo with better stuff added aswell as support for neovim)
+call dein#add('simnalamburt/vim-mundo')
+
+" NerdTree
+call dein#add('scrooloose/nerdtree')
+
+" Airline
+call dein#add('bling/vim-airline')
+
+" Autoclose delimiters
+call dein#add('Raimondi/delimitMate')
+
+" Tabular, indenting stuff with style
+call dein#add('godlygeek/tabular')
+
+" Git wrapper
+call dein#add('tpope/vim-fugitive')
+
+" Git - shows changes in editor
+call dein#add('airblade/vim-gitgutter')
+
+" Look inside registers
+call dein#add('junegunn/vim-peekaboo')
+
+" Vimwiki - todonotes and such
+call dein#add('vimwiki/vimwiki')
+
+" Session manager
+call dein#add('xolox/vim-misc')    " Required for the plugin
+call dein#add('xolox/vim-session') " The actual plugin
+
+" Easymotion
+call dein#add('easymotion/vim-easymotion')
+" End Tools =====================================
+
+" Begin Colorschemes ============================
+" Lucius 
+call dein#add('jonathanfilip/vim-lucius')
+" End Colorschemes ==============================
+
+" Begin Syntax Plugins ==========================
+" Encore 
+call dein#add('Chilinot/vimcore')
+" End Syntax Plugins== ==========================
+
+" Required:
+call dein#end()
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
+
+"End dein Scripts-------------------------
+
 " Bind leader to space
 let mapleader=" "
 
@@ -86,8 +168,8 @@ nnoremap K k
 nnoremap j gj
 nnoremap k gk
 
-" Toggle gundo (visual undo tree)
-nnoremap <leader>u :GundoToggle<CR>
+" Toggle mundo (visual undo tree)
+nnoremap <leader>u :MundoToggle<CR>
 
 " Folding
 nmap <C-F>i :setlocal fdm=indent<CR>
