@@ -93,3 +93,5 @@ alias gc='git commit -m'
 alias vim='nvim'
 # - ls -lah
 alias lla='ll -a'
+
+export LD_LIBRARY_PATH=LD_LIBRARY_PATH:/rw/usrlocal/lib64/
