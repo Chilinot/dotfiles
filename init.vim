@@ -166,8 +166,8 @@ set wildmenu
 set lazyredraw
 
 " Use J and K as regular movement
-nnoremap J j
-nnoremap K k
+"nnoremap J j
+"nnoremap K k
 " Use j and k with visual movement
 nnoremap j gj
 nnoremap k gk
