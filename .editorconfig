@@ -11,12 +11,12 @@ tab_width = 4
 indent_size = tab
 
 # 4 space indentation
-[*.{erl,js,rs,rb,rex,txt,vim,frag,vert,sh,enc}]
+[*.{js,rs,rb,rex,txt,vim,frag,vert,sh,enc}]
 indent_style = space
 indent_size = 4
 
 # 2 space indentation
-[*.{c,cpp,tex,bib,cl,h,hpp,pde,ino,wiki}]
+[*.{erl,c,cpp,tex,bib,cl,h,hpp,pde,ino,wiki}]
 indent_style = space
 indent_size = 2
 
