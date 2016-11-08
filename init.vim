@@ -61,13 +61,13 @@ call dein#add('editorconfig/editorconfig-vim')
 " End Tools =====================================
 
 " Begin Colorschemes ============================
-" Lucius 
+" Lucius
 call dein#add('jonathanfilip/vim-lucius')
 " End Colorschemes ==============================
 
 " Begin Syntax Plugins ==========================
-" Encore 
-call dein#add('Chilinot/vimcore')
+" Encore
+call dein#add('thegrandmother/vimcore')
 " End Syntax Plugins== ==========================
 
 " Required:
