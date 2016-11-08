@@ -55,6 +55,9 @@ call dein#add('xolox/vim-session') " The actual plugin
 
 " Easymotion
 call dein#add('easymotion/vim-easymotion')
+
+" EditorConfig
+call dein#add('editorconfig/editorconfig-vim')
 " End Tools =====================================
 
 " Begin Colorschemes ============================
@@ -204,3 +207,7 @@ set undodir=~/.vim/undofiles
 
 " Crap command used for fast pushing to garbage repo
 nmap <leader>p :!git commit -a -m "testing" && git push <cr><cr>
+
+" Editorconfig settings
+let g:EditorConfig_exec_path = '/rw/usrlocal/bin/editorconfig'
+let g:EditorConfig_core_mode = 'external_command'
