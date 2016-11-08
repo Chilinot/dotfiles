@@ -211,3 +211,7 @@ nmap <leader>p :!git commit -a --no-gpg-sign -m "testing" && git push <cr><cr>
 " Editorconfig settings
 let g:EditorConfig_exec_path = '/rw/usrlocal/bin/editorconfig'
 let g:EditorConfig_core_mode = 'external_command'
+
+" neovim terminal
+" - Exit insert mode
+tnoremap <F12> <C-\><C-n>
