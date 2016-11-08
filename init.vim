@@ -215,3 +215,7 @@ let g:EditorConfig_core_mode = 'external_command'
 " neovim terminal
 " - Exit insert mode
 tnoremap <F12> <C-\><C-n>
+
+" Macro related stuff
+" - Replay macro at: q
+nnoremap Q @q
