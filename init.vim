@@ -1,4 +1,5 @@
 "dein Scripts-----------------------------
+" This conditional block is for regular Vim
 if &compatible
   set nocompatible               " Be iMproved
 endif
