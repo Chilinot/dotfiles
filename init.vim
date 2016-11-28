@@ -68,6 +68,8 @@ call dein#add('jonathanfilip/vim-lucius')
 " Begin Syntax Plugins ==========================
 " Encore
 call dein#add('thegrandmother/vimcore')
+" Rust
+call dein#add('rust-lang/rust.vim')
 " End Syntax Plugins== ==========================
 
 " Required:
@@ -219,3 +221,7 @@ tnoremap <F12> <C-\><C-n>
 " Macro related stuff
 " - Replay macro at: q
 nnoremap Q @q
+
+" Eclimd:
+" - Java: auto import
+nnoremap <leader>ji :JavaImport<cr>
