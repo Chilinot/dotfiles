@@ -63,6 +63,9 @@ call dein#add('editorconfig/editorconfig-vim')
 " Begin Colorschemes ============================
 " Lucius
 call dein#add('jonathanfilip/vim-lucius')
+
+" DespaciO
+call dein#add('alessandroyorba/despacio')
 " End Colorschemes ==============================
 
 " Begin Syntax Plugins ==========================
