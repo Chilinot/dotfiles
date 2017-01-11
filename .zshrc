@@ -96,7 +96,7 @@ alias lla='ll -a'
 
 export LD_LIBRARY_PATH=LD_LIBRARY_PATH:/rw/usrlocal/lib64/
 
-export PATH="$HOME/.cargo/bin:$PATH"
 export GOPATH="$HOME/.gopath"
+export PATH="$GOPATH/bin:$HOME/.cargo/bin:$PATH"
 
 alias opn='xdg-open'
