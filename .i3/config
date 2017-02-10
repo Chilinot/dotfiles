@@ -186,4 +186,4 @@ exec --no-startup-id kmix
 exec --no-startup-id "/home/lucas/.fehbg"
 
 # Automatic screen lock
-exec --no-startup-id "xautolock -detectsleep -time 3 -locker 'i3lock -d -c 000000' -notifier \"notify-send -t 2000 'Locking screen in 30 seconds'\""
+#exec --no-startup-id "xautolock -detectsleep -time 3 -locker 'i3lock -d -c 000000' -notifier \"notify-send -t 2000 'Locking screen in 30 seconds'\""
