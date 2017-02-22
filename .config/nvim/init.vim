@@ -22,6 +22,10 @@ call dein#add('Shougo/dein.vim')
 "call dein#add('Shougo/neosnippet-snippets')
 
 " Begin Tools ===================================
+
+" Syntastic, awesome syntax checker.
+call dein#add('vim-syntastic/syntastic')
+
 " mundo (fork of gundo with better stuff added aswell as support for neovim)
 call dein#add('simnalamburt/vim-mundo')
 
@@ -228,3 +232,16 @@ nnoremap Q @q
 " Eclimd:
 " - Java: auto import
 nnoremap <leader>ji :JavaImport<cr>
+
+" Syntastic:
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" - Check syntax
+nnoremap <leader>c :SyntasticCheck<CR>
