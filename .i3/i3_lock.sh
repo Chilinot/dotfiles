@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-icon="$HOME/.i3/lock_icon.png"
+icon="$HOME/.i3/consbox.png"
 tmpbg='/tmp/screen.png'
 
 (( $# )) && { icon=$1; }
