@@ -146,7 +146,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Power control
-set $Locker i3lock && sleep 1
+set $Locker /home/lucas/.i3/i3_lock.sh && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {

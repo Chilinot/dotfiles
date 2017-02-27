@@ -1,7 +1,7 @@
 #!/bin/bash
 
 run_terminal='
-for t in $TERMINAL gnome-terminal urxvt rxvt terminator Eterm aterm xterm roxterm xfce4-terminal; do
+for t in $TERMINAL konsole gnome-terminal xterm urxvt rxvt terminator Eterm aterm roxterm xfce4-terminal; do
     which $t > /dev/null 2>&1 && exec $t;
 done
 '
