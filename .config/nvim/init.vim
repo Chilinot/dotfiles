@@ -73,8 +73,12 @@ call dein#add('alessandroyorba/despacio')
 " End Colorschemes ==============================
 
 " Begin Syntax Plugins ==========================
+" Syntastic, awesome syntax checker.
+call dein#add('vim-syntastic/syntastic')
+
 " Encore
 call dein#add('thegrandmother/vimcore')
+
 " Rust
 call dein#add('rust-lang/rust.vim')
 " End Syntax Plugins== ==========================
