@@ -23,8 +23,8 @@ call dein#add('Shougo/dein.vim')
 
 " Begin Tools ===================================
 
-" Syntastic, awesome syntax checker.
-call dein#add('vim-syntastic/syntastic')
+" Wakatime, time logger/management
+call dein#add('wakatime/vim-wakatime')
 
 " mundo (fork of gundo with better stuff added aswell as support for neovim)
 call dein#add('simnalamburt/vim-mundo')
