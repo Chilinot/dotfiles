@@ -81,6 +81,9 @@ call dein#add('thegrandmother/vimcore')
 
 " Rust
 call dein#add('rust-lang/rust.vim')
+
+" Slim, a template language for Rails
+call dein#add('slim-template/vim-slim')
 " End Syntax Plugins== ==========================
 
 " Required:
