@@ -222,7 +222,7 @@ set undofile
 set undodir=~/.config/nvim/undofiles
 
 " Crap command used for fast pushing to garbage repo
-nmap <leader>p :!git commit -a --no-gpg-sign -m "testing" && git push <cr><cr>
+"nmap <leader>p :!git commit -a --no-gpg-sign -m "testing" && git push <cr><cr>
 
 " Editorconfig settings
 let g:EditorConfig_exec_path = '/rw/usrlocal/bin/editorconfig'
