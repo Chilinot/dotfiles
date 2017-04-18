@@ -250,6 +250,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" - Disable the plugin for these filetypes
+let g:syntastic_disabled_filetypes=['eruby']
+
 " - Check syntax
 nnoremap <leader>c :SyntasticCheck<CR>
 
