@@ -252,3 +252,8 @@ let g:syntastic_check_on_wq = 0
 
 " - Check syntax
 nnoremap <leader>c :SyntasticCheck<CR>
+
+" Enable autosaving of sessions
+let g:session_autosave = 'yes'
+" Enable autoload of sessions
+let g:session_autoload = 'yes'
