@@ -58,7 +58,8 @@ status_load() {
 
 status_qubes() {
     local qubes=$(qvm-ls 2>/dev/null | grep ' \* ' | wc -l)
-    json qubes "$qubes Q"
+    local total_qubes=$(qvm-ls --raw-list 2>/dev/null | wc -l)
+    json qubes "$qubes / $total_qubes Q"
 }
 
 status_disk() {
