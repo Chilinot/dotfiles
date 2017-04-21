@@ -183,12 +183,6 @@ exec --no-startup-id /home/lucas/.i3/i3_autostart.sh
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
-# Xmodmap
-#exec_always --no-startup-id "sleep 3 && /home/lucas/.i3/keyboard.sh"
-
-# Sound applet
-exec --no-startup-id kmix
-
 # Wallpaper
 exec --no-startup-id "/home/lucas/.i3/.fehbg"
 
