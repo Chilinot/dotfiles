@@ -179,7 +179,7 @@ bar {
 # Autostart
 exec --no-startup-id /home/lucas/.i3/i3_autostart.sh
 
-# Sreen brightness controls
+# Screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
