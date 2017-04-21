@@ -28,17 +28,24 @@ status_time() {
 }
 
 status_bat() {
-    local bat_now=$(cat /sys/class/power_supply/BAT1/energy_now 2>/dev/null)
-    local bat_full=$(cat /sys/class/power_supply/BAT1/energy_full_design 2>/dev/null)
-    if [[ -n "$bat_full" ]]; then
-        local bat=$((100*bat_now/bat_full))
+    local bat0_now=$(cat /sys/class/power_supply/BAT0/energy_now 2>/dev/null)
+    local bat0_full=$(cat /sys/class/power_supply/BAT0/energy_full_design 2>/dev/null)
+    local bat1_now=$(cat /sys/class/power_supply/BAT1/energy_now 2>/dev/null)
+    local bat1_full=$(cat /sys/class/power_supply/BAT1/energy_full_design 2>/dev/null)
 
-	local tleft=$(upower -i $(upower -e | grep BAT) | grep --color=never -E "to\ empty" | awk '{print $4 " " $5}')
+    if [[ -n "$bat1_full" && -n "$bat0_full" ]]; then
+	# Multiply with 50 because one battery defines 50% of the total capacity.
+        local bat=$((50*bat0_now/bat0_full+50*bat1_now/bat1_full))
+
+	# It would seem the batteries in the Thinkpad T450 doesn't report the time left.
+	# TODO: Find new method of calculating time left.
+	#local tleft=$(upower -i $(upower -e | grep BAT) | grep --color=never -E "to\ empty" | awk '{print $4 " " $5}')
+	local tleft=''
         local ac=''
         local color='#00ff00'
-        if [[ $(cat /sys/class/power_supply/ADP1/online) == '1' ]]; then
+        if [[ $(cat /sys/class/power_supply/AC/online) == '1' ]]; then
             ac=' AC'
-            tleft=''
+            #tleft=''
         elif ((bat < 25)); then
             color='#ff0000'
         elif ((bat < 50)); then
