@@ -63,6 +63,11 @@ status_load() {
     json load "$load"
 }
 
+status_mem() {
+    local mem=$(qvm-ls --raw-data mem | grep MB | awk '{s += $1} END {print s}')
+    json mem "$mem MB"
+}
+
 status_qubes() {
     local qubes=$(qvm-ls 2>/dev/null | grep ' \* ' | wc -l)
     local total_qubes=$(qvm-ls --raw-list 2>/dev/null | wc -l)
@@ -86,9 +91,10 @@ main() {
             local disk=$(status_disk)
             local bat=$(status_bat)
             local load=$(status_load)
+            local mem=$(status_mem)
         fi
         local time=$(status_time)
-        echo ",[$qubes$net$disk$bat$load$time]"
+        echo ",[$qubes$net$disk$bat$load$mem$time]"
         sleep 1
     done
 }
