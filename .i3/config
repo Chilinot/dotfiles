@@ -176,21 +176,14 @@ bar {
         status_command /home/lucas/.i3/i3_status.sh
 }
 
-# Autostart
-exec --no-startup-id /home/lucas/.i3/i3_autostart.sh
-
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
-# Wallpaper
-#exec --no-startup-id "/home/lucas/.i3/.fehbg"
-
-# Automatic screen lock
-#exec --no-startup-id "xautolock -detectsleep -time 3 -locker 'i3lock -d -c 000000' -notifier \"notify-send -t 2000 'Locking screen in 30 seconds'\""
-
-# Sound applet
-exec --no-startup-id pasystray 
-
-# XFCE settings daemons
+# Autostart
+exec --no-startup-id /home/lucas/.i3/i3_autostart.sh
+# - XFCE settings daemons
 exec --no-startup-id xfsettingsd --sm-client-disable &
+# - Sound
+exec --no-startup-id pasystray # Applet, has working icon in i3_status, as well as some more advanced features, but does not listen for media keys.
+exec --no-startup-id kmix      # Also applet, doesn't have a working icon in i3_status, listens for media keys.
