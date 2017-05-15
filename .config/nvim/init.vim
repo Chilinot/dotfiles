@@ -256,6 +256,9 @@ let g:syntastic_check_on_wq = 0
 " - Disable the plugin for these filetypes
 let g:syntastic_disabled_filetypes=['eruby']
 
+" - Disable Eclim integration (should speedup vim)
+let g:airline#extensions#eclim#enabled = 0
+
 " - Check syntax
 nnoremap <leader>c :SyntasticCheck<CR>
 
