@@ -100,3 +100,5 @@ export GOPATH="$HOME/.gopath"
 export PATH="$GOPATH/bin:$HOME/.cargo/bin:$PATH"
 
 alias opn='xdg-open'
+
+alias sdep="cap staging deploy branch='staging'"
