@@ -46,10 +46,10 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+#bindsym $mod+Left focus left
+#bindsym $mod+Down focus down
+#bindsym $mod+Up focus up
+#bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -182,6 +182,9 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 
 # Media Keys (bound to spotify VM)
 bindsym XF86AudioPlay exec "qvm-run spotify 'playerctl play-pause'"
+bindsym $mod+Down exec "qvm-run spotify 'playerctl play-pause'"
+bindsym $mod+Left exec "qvm-run spotify 'playerctl previous'"
+bindsym $mod+Right exec "qvm-run spotify 'playerctl next'"
 
 # Autostart
 exec --no-startup-id /home/lucas/.i3/i3_autostart.sh
