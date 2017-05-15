@@ -84,6 +84,9 @@ call dein#add('rust-lang/rust.vim')
 
 " Slim, a template language for Rails
 call dein#add('slim-template/vim-slim')
+
+" CoffeScript
+call dein#add('vim-coffee-script')
 " End Syntax Plugins== ==========================
 
 " Required:
