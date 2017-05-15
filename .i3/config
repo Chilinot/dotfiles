@@ -180,6 +180,9 @@ bar {
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
+# Media Keys (bound to spotify VM)
+bindsym XF86AudioPlay exec "qvm-run spotify 'playerctl play-pause'"
+
 # Autostart
 exec --no-startup-id /home/lucas/.i3/i3_autostart.sh
 # - XFCE settings daemons
