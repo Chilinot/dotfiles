@@ -79,6 +79,11 @@ status_disk() {
     json disk "$disk"
 }
 
+status_temp() {
+    local temp=`sensors | grep 'Physical id 0' | awk '{print $4}'`
+    json temp "$temp"
+}
+
 main() {
     echo '{"version":1}'
     echo '['
@@ -91,10 +96,11 @@ main() {
             local disk=$(status_disk)
             local bat=$(status_bat)
             local load=$(status_load)
+            local temp=$(status_temp)
             local mem=$(status_mem)
         fi
         local time=$(status_time)
-        echo ",[$qubes$net$disk$bat$load$mem$time]"
+        echo ",[$qubes$net$disk$bat$load$temp$mem$time]"
         sleep 1
     done
 }
