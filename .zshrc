@@ -84,6 +84,11 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export LD_LIBRARY_PATH=LD_LIBRARY_PATH:/rw/usrlocal/lib64/
+
+export GOPATH="$HOME/.gopath"
+export PATH="$PATH:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.rbenv/bin:$HOME/.rbenv/plugins/ruby-build/bin"
+
 # Git
 alias gap='ga -p' # git add -p
 alias gc='git commit -m'
@@ -94,11 +99,10 @@ alias vim='nvim'
 # - ls -lah
 alias lla='ll -a'
 
-export LD_LIBRARY_PATH=LD_LIBRARY_PATH:/rw/usrlocal/lib64/
-
-export GOPATH="$HOME/.gopath"
-export PATH="$GOPATH/bin:$HOME/.cargo/bin:$PATH"
-
 alias opn='xdg-open'
 
+# Capistrano
 alias sdep="cap staging deploy branch='staging'"
+
+# Ruby
+eval "$(rbenv init -)"
