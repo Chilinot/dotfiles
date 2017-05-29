@@ -16,7 +16,7 @@ indent_style = space
 indent_size = 4
 
 # 2 space indentation
-[*.{erl,c,rb,erb,cpp,tex,bib,cl,h,hpp,pde,ino,wiki,enc}]
+[*.{erl,c,rb,erb,cpp,tex,bib,cl,h,hpp,pde,ino,wiki,enc,coffee}]
 indent_style = space
 indent_size = 2
 
