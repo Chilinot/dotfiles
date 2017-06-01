@@ -128,7 +128,7 @@ set number
 " Theme
 syntax enable          " Enable syntax higlight
 colorscheme lucius
-LuciusLightHighContrast  " Define what version of the lucius scheme to use
+LuciusDarkLowContrast  " Define what version of the lucius scheme to use
 
 " Highlight tabs and trailing spaces
 set listchars=tab:\| ,trail:·
