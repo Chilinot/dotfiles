@@ -89,7 +89,7 @@ call dein#add('rust-lang/rust.vim')
 call dein#add('slim-template/vim-slim')
 
 " CoffeScript
-call dein#add('vim-coffee-script')
+call dein#add('vim-scripts/vim-coffee-script')
 " End Syntax Plugins== ==========================
 
 " Required:
