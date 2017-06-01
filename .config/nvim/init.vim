@@ -23,6 +23,9 @@ call dein#add('Shougo/dein.vim')
 
 " Begin Tools ===================================
 
+" Tagbar, list ctags in separate window
+call dein#add('majutsushi/tagbar')
+
 " Wakatime, time logger/management
 call dein#add('wakatime/vim-wakatime')
 
@@ -199,6 +202,9 @@ nmap <C-F>i :setlocal fdm=indent<CR>
 nmap <C-F>s :setlocal fdm=syntax<CR>
 nmap ff za
 nmap FF zA
+
+" Toggle tagbar window
+nmap <F2> :TagbarToggle<CR>
 
 " Kill current buffer without closing window
 nmap <F3> :Bd<CR>
