@@ -32,8 +32,8 @@ call dein#add('majutsushi/tagbar')
 " Wakatime, time logger/management
 call dein#add('wakatime/vim-wakatime')
 
-" mundo (fork of gundo with better stuff added aswell as support for neovim)
-call dein#add('simnalamburt/vim-mundo')
+" Visual undo tree.
+call dein#add('mbbill/undotree')
 
 " NerdTree
 call dein#add('scrooloose/nerdtree')
@@ -197,8 +197,8 @@ set lazyredraw
 nnoremap j gj
 nnoremap k gk
 
-" Toggle mundo (visual undo tree)
-nnoremap <leader>u :MundoToggle<CR>
+" Toggle visual undo tree.
+nnoremap <leader>u :UndotreeToggle<CR>
 
 " Folding
 nmap <C-F>i :setlocal fdm=indent<CR>
