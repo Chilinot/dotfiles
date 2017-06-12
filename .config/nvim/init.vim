@@ -23,6 +23,9 @@ call dein#add('Shougo/dein.vim')
 
 " Begin Tools ===================================
 
+" Rails plugin
+call dein#add('tpope/vim-rails')
+
 " Tagbar, list ctags in separate window
 call dein#add('majutsushi/tagbar')
 
