@@ -26,6 +26,9 @@ call dein#add('Shougo/dein.vim')
 " Hilight indentation
 "call dein#add('nathanaelkane/vim-indent-guides')
 
+" Unite, fuzzy search all the things!
+call dein#add('Shougo/unite.vim')
+
 " Rails plugin
 call dein#add('tpope/vim-rails')
 
