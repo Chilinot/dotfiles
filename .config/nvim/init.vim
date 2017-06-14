@@ -23,6 +23,9 @@ call dein#add('Shougo/dein.vim')
 
 " Begin Tools ===================================
 
+" Hilight indentation
+"call dein#add('nathanaelkane/vim-indent-guides')
+
 " Rails plugin
 call dein#add('tpope/vim-rails')
 
@@ -275,3 +278,6 @@ nnoremap <leader>c :SyntasticCheck<CR>
 let g:session_autosave = 'yes'
 " Enable autoload of sessions
 let g:session_autoload = 'no'
+
+" Indent guides (plugin doesn't seem to work for me)
+"let g:indent_guides_enable_on_vim_startup=1
