@@ -26,6 +26,9 @@ call dein#add('Shougo/dein.vim')
 " Hilight indentation
 "call dein#add('nathanaelkane/vim-indent-guides')
 
+" SQL Workbench
+call dein#add('/home/user/git/vim-sql-workbench')
+
 " Unite, fuzzy search all the things!
 call dein#add('Shougo/unite.vim')
 
@@ -291,3 +294,8 @@ let g:session_autoload = 'no'
 
 " Indent guides (plugin doesn't seem to work for me)
 "let g:indent_guides_enable_on_vim_startup=1
+
+" SQLWorkbench settings
+let g:sw_exe             = '/home/user/bin/sqlwbconsole'
+let g:sw_config_dir      = '/home/user/.sqlworkbench/'
+let g:sw_save_resultsets = 1
