@@ -106,3 +106,6 @@ alias sdep="cap staging deploy branch='staging'"
 
 # Ruby
 eval "$(rbenv init -)"
+
+# Ansible
+export ANSIBLE_INVENTORY=~/ansible_hosts
