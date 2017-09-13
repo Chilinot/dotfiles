@@ -161,17 +161,17 @@ set hlsearch " Highlights matchers
 nnoremap <leader>n :nohlsearch<CR> " Remove highlight
 
 " Better insert of new line
-nmap <C-K> O<Esc>
-nmap <C-J> o<Esc>
+nnoremap <C-K> O<Esc>
+nnoremap <C-J> o<Esc>
 
 " NERDTree
-nmap <F1> :NERDTree<CR>
+nnoremap <F1> :NERDTree<CR>
 
 " Change buffer
-nmap <C-L> :tabnext<CR>
-nmap <C-H> :tabprevious<CR>
-nmap <S-L> :bnext<CR>
-nmap <S-H> :bprevious<CR>
+nnoremap <C-L> :tabnext<CR>
+nnoremap <C-H> :tabprevious<CR>
+nnoremap <S-L> :bnext<CR>
+nnoremap <S-H> :bprevious<CR>
 
 " Kill buffer without closing window layout
 command Bd bp | sp | bn | bd
@@ -210,29 +210,30 @@ nnoremap k gk
 nnoremap <leader>u :UndotreeToggle<CR>
 
 " Folding
-nmap <C-F>i :setlocal fdm=indent<CR>
-nmap <C-F>s :setlocal fdm=syntax<CR>
-nmap ff za
-nmap FF zA
+nnoremap <C-F>i :setlocal fdm=indent<CR>
+nnoremap <C-F>s :setlocal fdm=syntax<CR>
+nnoremap ff za
+nnoremap FF zA
 
 " Toggle tagbar window
-nmap <F2> :TagbarToggle<CR>
+nnoremap <F2> :TagbarToggle<CR>
 
 " Kill current buffer without closing window
-nmap <F3> :Bd<CR>
+nnoremap <F3> :Bd<CR>
+nnoremap <leader>q :Bd<CR>
 
 " Reload the current file
-nmap <F4> :e<CR>
+nnoremap <F4> :e<CR>
 
 " Window keybinds:
 " - Increase window width
-nmap <Right> <C-W>>
+nnoremap <Right> <C-W>>
 " - Decrease window width
-nmap <Left> <C-W><
+nnoremap <Left> <C-W><
 " - Increase window height
-nmap <Up> :resize +1<CR>
+nnoremap <Up> :resize +1<CR>
 " - Decrease window height
-nmap <Down> :resize -1<CR>
+nnoremap <Down> :resize -1<CR>
 
 " Split vertically as default (used for cscope)
 set splitright
