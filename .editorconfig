@@ -16,7 +16,7 @@ indent_style = space
 indent_size = 4
 
 # 2 space indentation
-[*.{yml,erl,c,rb,erb,rake,cpp,tex,bib,cl,h,hpp,pde,ino,wiki,enc,coffee}]
+[*.{slim,yml,erl,c,rb,erb,rake,Rakefile,cpp,tex,bib,cl,h,hpp,pde,ino,wiki,enc,coffee}]
 indent_style = space
 indent_size = 2
 
