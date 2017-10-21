@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/user/.oh-my-zsh
+export ZSH=/home/lucas/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -91,7 +91,7 @@ export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/plugins/ruby-build/bin:$GOPATH/bin:$H
 
 # Git
 alias gap='ga -p' # git add -p
-alias gc='git commit -m'
+alias gc='git commit'
 
 # General
 # - Always use nvim instead of regular vim

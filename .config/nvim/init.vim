@@ -5,10 +5,10 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/home/user/.config/nvim/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=/home/lucas/.config/nvim/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-call dein#begin('/home/user/.config/nvim/dein')
+call dein#begin('/home/lucas/.config/nvim/dein')
 
 " Let dein manage dein
 " Required:
@@ -25,9 +25,6 @@ call dein#add('Shougo/dein.vim')
 
 " Hilight indentation
 "call dein#add('nathanaelkane/vim-indent-guides')
-
-" SQL Workbench
-call dein#add('/home/user/git/vim-sql-workbench')
 
 " Unite, fuzzy search all the things!
 call dein#add('Shougo/unite.vim')
@@ -247,8 +244,8 @@ set undodir=~/.config/nvim/undofiles
 "nmap <leader>p :!git commit -a --no-gpg-sign -m "testing" && git push <cr><cr>
 
 " Editorconfig settings
-let g:EditorConfig_exec_path = '/rw/usrlocal/bin/editorconfig'
-let g:EditorConfig_core_mode = 'external_command'
+"let g:EditorConfig_exec_path = '/rw/usrlocal/bin/editorconfig'
+"let g:EditorConfig_core_mode = 'external_command'
 
 " neovim terminal
 " - Exit insert mode
@@ -297,6 +294,6 @@ let g:session_autoload = 'no'
 "let g:indent_guides_enable_on_vim_startup=1
 
 " SQLWorkbench settings
-let g:sw_exe             = '/home/user/bin/sqlwbconsole'
-let g:sw_config_dir      = '/home/user/.sqlworkbench/'
+let g:sw_exe             = '/home/lucas/bin/sqlwbconsole'
+let g:sw_config_dir      = '/home/lucas/.sqlworkbench/'
 let g:sw_save_resultsets = 1
