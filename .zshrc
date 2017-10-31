@@ -109,3 +109,6 @@ eval "$(rbenv init -)"
 
 # Ansible
 export ANSIBLE_INVENTORY=~/ansible_hosts
+
+# Docker
+export DOCKER_ID_USER="lucasemanuel"
