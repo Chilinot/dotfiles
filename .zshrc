@@ -117,3 +117,13 @@ export ANSIBLE_INVENTORY=~/ansible_hosts
 
 # Docker
 export DOCKER_ID_USER="lucasemanuel"
+
+# Metasploit workaround for issue #9281
+export PATH="/opt/metasploit-framework/bin:$PATH"
+
+# Android tools
+export PATH="$HOME/android/platform-tools:$PATH"
+
+# NPM
+export NPM_PACKAGES=~/.npm-packages
+export PATH="$NPM_PACKAGES:$PATH"
