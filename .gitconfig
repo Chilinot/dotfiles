@@ -4,8 +4,6 @@
 	signingkey = 4511A587
 [push]
 	default = simple
-[pull]
-	rebase = true
 [commit]
 	gpgSign = true
 [gpg]
