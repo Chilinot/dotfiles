@@ -122,4 +122,4 @@ export PATH="$HOME/android/platform-tools:$PATH"
 
 # NPM
 export NPM_PACKAGES=~/.npm-packages
-export PATH="$NPM_PACKAGES:$PATH"
+export PATH="$NPM_PACKAGES/bin:$PATH"
