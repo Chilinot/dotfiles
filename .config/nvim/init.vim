@@ -99,6 +99,9 @@ call dein#add('slim-template/vim-slim')
 
 " CoffeScript
 call dein#add('vim-scripts/vim-coffee-script')
+
+" Elm
+call dein#add('ElmCast/elm-vim')
 " End Syntax Plugins== ==========================
 
 " Required:
@@ -276,6 +279,12 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" - Syntastic Rust
+let g:syntastic_rust_checkers = ['cargo']
+
+" - Syntastic Elm
+let g:elm_syntastic_show_warnings = 1
+
 " - Disable the plugin for these filetypes
 let g:syntastic_disabled_filetypes=['eruby']
 
@@ -297,3 +306,7 @@ let g:session_autoload = 'no'
 let g:sw_exe             = '/home/lucas/bin/sqlwbconsole'
 let g:sw_config_dir      = '/home/lucas/.sqlworkbench/'
 let g:sw_save_resultsets = 1
+
+" Elm
+" - Disable default keybinds
+let g:elm_setup_keybindings = 0
