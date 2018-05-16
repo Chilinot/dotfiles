@@ -283,7 +283,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_rust_checkers = ['cargo']
 
 " - Syntastic Elm
-let g:elm_syntastic_show_warnings = 1
+"let g:elm_syntastic_show_warnings = 1
 
 " - Disable the plugin for these filetypes
 let g:syntastic_disabled_filetypes=['eruby']
