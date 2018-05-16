@@ -310,3 +310,7 @@ let g:sw_save_resultsets = 1
 " Elm
 " - Disable default keybinds
 let g:elm_setup_keybindings = 0
+
+" Display vertical line at column 81
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
