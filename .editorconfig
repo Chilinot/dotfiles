@@ -8,10 +8,10 @@ insert_final_newline = false
 charset = utf-8
 trim_trailing_whitespace = true
 tab_width = 4
-indent_size = tab
+indent_style = space
 
 # 4 space indentation
-[*.{js,rs,rex,txt,vim,frag,vert,sh}]
+[Dockerfile,*.{js,rs,rex,txt,vim,frag,vert,sh}]
 indent_style = space
 indent_size = 4
 
