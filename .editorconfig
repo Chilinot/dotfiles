@@ -12,7 +12,7 @@ indent_style = space
 indent_size = 2
 
 # 4 space indentation
-[Dockerfile,*.{js,rs,rex,txt,vim,frag,vert,sh}]
+[Dockerfile,*.{js,rs,rex,txt,vim,frag,vert,sh,elm}]
 indent_style = space
 indent_size = 4
 
