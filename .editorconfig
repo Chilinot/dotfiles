@@ -9,6 +9,7 @@ charset = utf-8
 trim_trailing_whitespace = true
 tab_width = 4
 indent_style = space
+indent_size = 2
 
 # 4 space indentation
 [Dockerfile,*.{js,rs,rex,txt,vim,frag,vert,sh}]
