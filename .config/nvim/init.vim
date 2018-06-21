@@ -312,5 +312,5 @@ let g:sw_save_resultsets = 1
 let g:elm_setup_keybindings = 0
 
 " Display vertical line at column 81
-highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%81v', 100)
+"highlight ColorColumn ctermbg=12
+"call matchadd('ColorColumn', '\%81v', 100)
