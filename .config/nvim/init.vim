@@ -73,7 +73,8 @@ call dein#add('xolox/vim-session') " The actual plugin
 call dein#add('easymotion/vim-easymotion')
 
 " EditorConfig
-call dein#add('editorconfig/editorconfig-vim')
+"call dein#add('editorconfig/editorconfig-vim')
+call dein#add('sgur/vim-editorconfig')
 " End Tools =====================================
 
 " Begin Colorschemes ============================
