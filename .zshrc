@@ -125,3 +125,6 @@ export PATH="$HOME/android/platform-tools:$PATH"
 # NPM
 export NPM_PACKAGES=~/.npm-packages
 export PATH="$NPM_PACKAGES/bin:$PATH"
+
+# Unetbootin (flash USB drives with iso files)
+alias unetbootin='xhost local:root && sudo QT_X11_NO_MITSHM=1 /usr/bin/unetbootin'
