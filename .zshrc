@@ -90,6 +90,8 @@ export LD_LIBRARY_PATH=LD_LIBRARY_PATH:/rw/usrlocal/lib64/
 export GOPATH="$HOME/.gopath"
 export PATH="$HOME/.local/bin:$HOME/.rbenv/bin:$HOME/.rbenv/plugins/ruby-build/bin:$GOPATH/bin:$HOME/.cargo/bin:$PATH"
 
+export PKG_CONFIG_PATH="/usr/local/lib64/:/usr/local/lib/:$PKG_CONFIG_PATH"
+
 # Git
 alias gap='ga -p' # git add -p
 alias gc='git commit'
