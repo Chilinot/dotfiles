@@ -7,6 +7,15 @@ network_regex_prefix = '([\w -]*[\w-]+)\s+([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[
 network_regex_wifi = /#{network_regex_prefix}wlp3s0/
 network_regex_eth  = /#{network_regex_prefix}enp0s25/
 
+def json(name, text, color = '#ffffff')
+  "{\"name\":\"#{name}\",\"color\":\"#{color}\",\"full_text\":\"#{text}\"},"
+end
+
+# Start json protocol output
+puts '{"version":1}'
+puts '['
+puts '[]'
+
 while true do
   #
   # Date
@@ -55,7 +64,16 @@ while true do
   #
   # Output
   #
-  puts "#{date} | Bat: #{battery_percentage}% (#{battery_time}) | WiFi: #{wifi_name} | Eth: #{eth_status} | Sound: #{sound_level}% (#{sound_muted}) | Screen: #{light_percentage}% "
+  #puts "#{date} | Bat: #{battery_percentage}% (#{battery_time}) | WiFi: #{wifi_name} | Eth: #{eth_status} | Sound: #{sound_level}% (#{sound_muted}) | Screen: #{light_percentage}% "
+  output = ',['
+  output += json('date', date)
+  output += json('battery', "Battery: #{battery_percentage}% (#{battery_time})", (battery_percentage.to_i < 20 ? '#ff0000' : '#00ff00'))
+  output += json('wifi', "WiFi: #{wifi_name}", (wifi_name ? '#00ff00' : '#ff0000'))
+  output += json('eth', "Eth: #{eth_status}", (eth_status == 'none' ? '#ff0000' : '#00ff00'))
+  output += json('sound', "Sound: #{sound_level}%", (sound_muted == 'off' ? '#ff0000' : '#00ff00'))
+  output += json('screen', "Screen: #{light_percentage}%")
+  output += ']'
+  puts output
 
   # Sleep 1 second
   sleep(1)
