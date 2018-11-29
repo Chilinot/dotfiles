@@ -3,9 +3,9 @@
 require 'date'
 
 # Regex: /^(name)\s+(uuid)\s+(type)\s+(device)/
-network_regex_prefix = '([\w -]*[\w-]+)\s+([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})\s+(\w+)\s+'
-network_regex_wifi = /#{network_regex_prefix}wlp3s0/
-network_regex_eth  = /#{network_regex_prefix}enp0s25/
+network_regex_prefix = '(.+?):([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}):802-(11-wireless|3-ethernet):'
+network_regex_wifi = /^#{network_regex_prefix}wlp3s0$/
+network_regex_eth  = /^#{network_regex_prefix}enp0s25$/
 
 def json(name, text, color = '#ffffff')
   "{\"name\":\"#{name}\",\"color\":\"#{color}\",\"full_text\":\"#{text}\"},"
@@ -35,7 +35,7 @@ while true do
   #
   # Network
   #
-  network_data = %x(nmcli connection show --active)
+  network_data = %x(nmcli --terse connection show --active)
   # - WiFi
   wifi_name = network_data[network_regex_wifi, 1]
   # - Ethernet
