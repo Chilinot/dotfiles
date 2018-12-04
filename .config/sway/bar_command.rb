@@ -1,6 +1,7 @@
 #!/bin/env ruby
 
 require 'date'
+require 'json'
 
 # Regex: /^(name)\s+(uuid)\s+(type)\s+(device)/
 network_regex_prefix = '(.+?):([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}):802-(11-wireless|3-ethernet):'
@@ -62,6 +63,12 @@ while true do
   light_percentage = light_data[light_regex, 1]
 
   #
+  # Keyboard Layout
+  #
+  layout_data = JSON.parse(%x(swaymsg -r -t get_inputs))
+  layout = layout_data.find{ |e| e['identifier'] == '1:1:AT_Translated_Set_2_keyboard'}['xkb_active_layout_name']
+
+  #
   # Output
   #
   #puts "#{date} | Bat: #{battery_percentage}% (#{battery_time}) | WiFi: #{wifi_name} | Eth: #{eth_status} | Sound: #{sound_level}% (#{sound_muted}) | Screen: #{light_percentage}% "
@@ -72,6 +79,7 @@ while true do
   output += json('eth', "Eth: #{eth_status}", (eth_status == 'none' ? '#ff0000' : '#00ff00'))
   output += json('sound', "Sound: #{sound_level}%", (sound_muted == 'off' ? '#ff0000' : '#00ff00'))
   output += json('screen', "Screen: #{light_percentage}%")
+  output += json('keyboard', "Keyboard: #{layout}")
   output += ']'
   puts output
 
