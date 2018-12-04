@@ -4,9 +4,10 @@ require 'date'
 require 'json'
 
 # Regex: /^(name)\s+(uuid)\s+(type)\s+(device)/
-network_regex_prefix = '(.+?):([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}):802-(11-wireless|3-ethernet):'
-network_regex_wifi = /^#{network_regex_prefix}wlp3s0$/
-network_regex_eth  = /^#{network_regex_prefix}enp0s25$/
+network_regex_prefix = '(.+?):([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})'
+network_regex_wifi = /^#{network_regex_prefix}:802-11-wireless:wlp3s0$/
+network_regex_eth  = /^#{network_regex_prefix}:802-3-ethernet:enp0s25$/
+network_regex_vpn  = /^#{network_regex_prefix}:vpn:\w*?$/
 
 def json(name, text, color = '#ffffff')
   "{\"name\":\"#{name}\",\"color\":\"#{color}\",\"full_text\":\"#{text}\"},"
@@ -45,6 +46,12 @@ while true do
   else
     eth_status = 'none'
   end
+  # - VPN
+  if (vpn = network_data[network_regex_vpn, 1])
+    vpn_status = vpn
+  else
+    vpn_status = 'none'
+  end
 
   #
   # Sound
@@ -77,12 +84,13 @@ while true do
   output += json('battery', "Battery: #{battery_percentage}% (#{battery_time})", (battery_percentage.to_i < 20 ? '#ff0000' : '#00ff00'))
   output += json('wifi', "WiFi: #{wifi_name}", (wifi_name ? '#00ff00' : '#ff0000'))
   output += json('eth', "Eth: #{eth_status}", (eth_status == 'none' ? '#ff0000' : '#00ff00'))
+  output += json('vpn', "VPN: #{vpn_status}")
   output += json('sound', "Sound: #{sound_level}%", (sound_muted == 'off' ? '#ff0000' : '#00ff00'))
   output += json('screen', "Screen: #{light_percentage}%")
   output += json('keyboard', "Keyboard: #{layout}")
   output += ']'
   puts output
 
-  # Sleep 1 second
-  sleep(1)
+  # Sleep until the exact next second
+  sleep(1 - Time.now.subsec)
 end
