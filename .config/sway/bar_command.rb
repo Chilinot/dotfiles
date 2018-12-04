@@ -28,7 +28,7 @@ while true do
   # Battery
   #
   battery_data = %x(upower --show-info /org/freedesktop/UPower/devices/DisplayDevice)
-  battery_percentage = battery_data[/percentage:\s+(\d{1,3}),?\d+%/, 1]
+  battery_percentage = battery_data[/percentage:\s+(\d{1,3}),?\d*%/, 1]
   battery_time = battery_data[/time to empty:\s+(\d+,\d+ \w+)/, 1]
   unless battery_time
     battery_time = 'charging'
