@@ -103,6 +103,9 @@ call dein#add('vim-scripts/vim-coffee-script')
 
 " Elm
 call dein#add('ElmCast/elm-vim')
+
+" VueJS
+call dein#add('posva/vim-vue')
 " End Syntax Plugins== ==========================
 
 " Required:
