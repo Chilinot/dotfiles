@@ -74,6 +74,14 @@ while true do
   #
   layout_data = JSON.parse(%x(swaymsg -r -t get_inputs))
   layout = layout_data.find{ |e| e['identifier'] == '1:1:AT_Translated_Set_2_keyboard'}['xkb_active_layout_name']
+  layout = layout == 'Swedish' ? 'SWE' : 'US'
+  # - There are two identical values in the output of the layout_data command for my workplace keyboard.
+  # - And only the last one is the correct one.
+  layout_work_list = layout_data.find_all{ |e| e['identifier'] == '1118:219:Microsoft_Natural®_Ergonomic_Keyboard_4000' }
+  if layout_work_list
+    layout_work = layout_work_list.last['xkb_active_layout_name']
+    layout_work = layout_work == 'Swedish' ? ',(SWE)' : ',(US)'
+  end
 
   #
   # Output
@@ -87,7 +95,7 @@ while true do
   output += json('vpn', "VPN: #{vpn_status}")
   output += json('sound', "Sound: #{sound_level}%", (sound_muted == 'off' ? '#ff0000' : '#00ff00'))
   output += json('screen', "Screen: #{light_percentage}%")
-  output += json('keyboard', "Keyboard: #{layout}")
+  output += json('keyboard', "Keyboard: #{layout + layout_work}")
   output += ']'
   puts output
 
