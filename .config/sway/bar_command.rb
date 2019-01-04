@@ -79,8 +79,12 @@ while true do
   # - And only the last one is the correct one.
   layout_work_list = layout_data.find_all{ |e| e['identifier'] == '1118:219:Microsoft_Natural®_Ergonomic_Keyboard_4000' }
   if layout_work_list
-    layout_work = layout_work_list.last['xkb_active_layout_name']
-    layout_work = layout_work == 'Swedish' ? ',(SWE)' : ',(US)'
+    if layout_work_list.size > 0
+      layout_work = layout_work_list.last['xkb_active_layout_name']
+      layout_work = layout_work == 'Swedish' ? ',(SWE)' : ',(US)'
+    else
+      layout_work = ''
+    end
   end
 
   #
