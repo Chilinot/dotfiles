@@ -153,6 +153,11 @@ set list
 " Autoindent according to line above
 set autoindent
 
+" Smarter indentation based on what you are typing
+set smartindent
+" - Disable smartindents handling of lines starting with '#'
+inoremap # X#
+
 " Display cursor position
 set ruler
 
