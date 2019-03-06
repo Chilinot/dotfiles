@@ -108,6 +108,9 @@ set $menu j4-dmenu-desktop
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
+
+    bindsym $mod+Shift+Ctrl+$left move workspace to output left
+    bindsym $mod+Shift+Ctrl+$right move workspace to output right
 #
 # Workspaces:
 #
