@@ -85,8 +85,6 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export LD_LIBRARY_PATH=LD_LIBRARY_PATH:/rw/usrlocal/lib64/
-
 export GOPATH="$HOME/.gopath"
 export PATH="$HOME/.local/bin:$HOME/.rbenv/bin:$HOME/.rbenv/plugins/ruby-build/bin:$GOPATH/bin:$HOME/.cargo/bin:$PATH"
 
