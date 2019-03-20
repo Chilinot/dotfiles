@@ -227,3 +227,9 @@ include /etc/sway/config.d/*
   bindsym XF86AudioLowerVolume exec amixer sset 'Master' 5%-
   bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 5%+
   bindsym XF86AudioPlay exec playerctl play-pause
+
+#
+# Laptop Lid Events
+#
+  bindswitch lid:on exec swaymsg output eDP-1 disable
+  bindswitch lid:off exec swaymsg output eDP-1 enable
