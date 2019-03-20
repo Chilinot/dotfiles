@@ -21,7 +21,7 @@ set $menu j4-dmenu-desktop | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/sway/)
-#output * bg /usr/share/backgrounds/f26/default/normalish/f26.png fill
+output * bg /usr/share/backgrounds/f29/default/normalish/f29.png fill
 #
 # Example configuration:
 #
