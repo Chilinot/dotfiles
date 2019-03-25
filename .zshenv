@@ -9,3 +9,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export XDG_CURRENT_DESKTOP=Unity
 
 export LD_LIBRARY_PATH=LD_LIBRARY_PATH:/usr/local/lib64/
+
+# Fix for Java programs and Sway
+export _JAVA_AWT_WM_NONREPARENTING=1
