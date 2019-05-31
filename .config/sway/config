@@ -37,6 +37,11 @@ output * bg /usr/share/backgrounds/f29/default/normalish/f29.png fill
        middle_emulation enabled
    }
 
+   # QPAD Mouse
+   input "1204:4643:La-VIEW_CO._QPAD_Gaming_Mouse" {
+       pointer_accel -0.8
+   }
+
    # Keyboard
    input "1:1:AT_Translated_Set_2_keyboard" {
        xkb_layout se,us
