@@ -237,10 +237,5 @@ include /etc/sway/config.d/*
 #
 # Laptop Lid Events
 #
-  bindswitch lid:on exec swaymsg output eDP-1 disable
-  bindswitch lid:off exec swaymsg output eDP-1 enable
-
-#
-# Check if laptop lid is already closed on startup.
-#
-  exec_always cat /proc/acpi/button/lid/LID/state | awk '{print $2}' | grep -q 'closed' && swaymsg output eDP-1 disable
+  bindswitch lid:on output eDP-1 disable
+  bindswitch lid:off output eDP-1 enable
