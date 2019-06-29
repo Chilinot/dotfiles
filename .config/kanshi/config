@@ -2,6 +2,6 @@
   output eDP-1 mode 1920x1080 position 0,0
 }
 {
-  output eDP-1 mode 1920x1080 position 0,0
-  output "Acer Technologies GN246HL LW3EE0058532" mode 1920x1080 position 1920,0
+  output eDP-1 disable
+  output "Acer Technologies GN246HL LW3EE0058532" mode 1920x1080 position 0,0
 }
