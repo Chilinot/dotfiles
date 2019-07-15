@@ -5,3 +5,8 @@
   output eDP-1 disable
   output "Acer Technologies GN246HL LW3EE0058532" mode 1920x1080 position 0,0
 }
+{
+  output eDP-1 disable
+  output "Dell Inc. DELL E2417H 2RM368792A3L" mode 1920x1080 position 0,0
+  output "Dell Inc. DELL E2417H 2RM3687A05UL" mode 1920x1080 position 1920,0
+}
