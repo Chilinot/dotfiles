@@ -128,3 +128,6 @@ export PATH="$NPM_PACKAGES/bin:$PATH"
 alias unetbootin='xhost local:root && sudo QT_X11_NO_MITSHM=1 /usr/bin/unetbootin'
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Stop all Docker containers
+alias dsa='docker stop $(docker ps -q)'
