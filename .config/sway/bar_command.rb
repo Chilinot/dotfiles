@@ -7,7 +7,7 @@ require 'json'
 network_regex_prefix = '(.+?):([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})'
 network_regex_wifi = /^#{network_regex_prefix}:802-11-wireless:wlp3s0$/
 network_regex_eth  = /^#{network_regex_prefix}:802-3-ethernet:enp0s25$/
-network_regex_vpn  = /^#{network_regex_prefix}:vpn:\w*?$/
+network_regex_vpn  = /^#{network_regex_prefix}:(vpn|wireguard):\w*?$/
 
 def json(name, text, color = '#ffffff')
   "{\"name\":\"#{name}\",\"color\":\"#{color}\",\"full_text\":\"#{text}\"},"
