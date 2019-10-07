@@ -26,6 +26,9 @@ call dein#add('Shougo/dein.vim')
 " Hilight indentation
 "call dein#add('nathanaelkane/vim-indent-guides')
 
+" Terraform syntax highlight and :Terraform command
+call dein#add('hashivim/vim-terraform')
+
 " Unite, fuzzy search all the things!
 call dein#add('Shougo/unite.vim')
 
