@@ -246,3 +246,9 @@ include /etc/sway/config.d/*
 #
   bindswitch lid:on output eDP-1 disable
   bindswitch lid:off output eDP-1 enable
+
+#
+# Print Screen
+#
+  # current window
+  bindsym Print exec /home/lucas/.config/sway/tools/grimshot save win
