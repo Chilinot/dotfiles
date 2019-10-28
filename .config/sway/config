@@ -29,6 +29,9 @@ exec kanshi
 # Make inactive windows transparent
 exec /home/lucas/.config/sway/tools/inactive-windows-transparency.py
 
+# Handle idle activity
+exec swayidle -w timeout 300 'swaylock -f' timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'swaylock -f'
+
    # Work displays
    #output DP-4 resolution 1920x1080 position 0,0
    #output DP-5 resolution 1920x1080 position 1920,0
