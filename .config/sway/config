@@ -24,10 +24,10 @@ set $menu j4-dmenu-desktop | xargs swaymsg exec --
 output * bg /usr/share/backgrounds/f29/default/normalish/f29.png fill
 
 # Kanshi will automatically handle different monitor setups
-exec_always kanshi
+exec kanshi
 
 # Make inactive windows transparent
-exec_always /home/lucas/.config/sway/tools/inactive-windows-transparency.py
+exec /home/lucas/.config/sway/tools/inactive-windows-transparency.py
 
    # Work displays
    #output DP-4 resolution 1920x1080 position 0,0
