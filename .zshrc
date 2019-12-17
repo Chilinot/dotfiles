@@ -1,13 +1,7 @@
-# Start tmux by default
-#if [ "$TMUX" = "" ]; then tmux; fi
-
-
+source "${ZDOTDIR:-${HOME}}/.zshrc-`uname`"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH=/home/lucas/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -52,12 +46,6 @@ HIST_STAMPS="yyyy-mm-dd"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting rbenv capistrano docker docker-compose)
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -74,7 +62,7 @@ export EDITOR='nvim'
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
+#export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -84,11 +72,6 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-export GOPATH="$HOME/.gopath"
-export PATH="$HOME/.local/bin:$HOME/.rbenv/bin:$HOME/.rbenv/plugins/ruby-build/bin:$GOPATH/bin:$HOME/.cargo/bin:$PATH"
-
-export PKG_CONFIG_PATH="/usr/local/lib64/:/usr/local/lib/:$PKG_CONFIG_PATH"
 
 # Git
 alias gap='ga -p' # git add -p
@@ -102,30 +85,15 @@ alias lla='ll -a'
 
 alias opn='xdg-open'
 
-# Capistrano
-alias sdep="cap staging deploy branch='staging'"
-
-# Ruby
-eval "$(rbenv init -)"
-
 # Ansible
 export ANSIBLE_INVENTORY=~/ansible_hosts
 
 # Docker
 export DOCKER_ID_USER="lucasemanuel"
 
-# Metasploit workaround for issue #9281
-export PATH="/opt/metasploit-framework/bin:$PATH"
-
-# Android tools
-export PATH="$HOME/android/platform-tools:$PATH"
-
 # NPM
 export NPM_PACKAGES=~/.npm-packages
 export PATH="$NPM_PACKAGES/bin:$PATH"
-
-# Unetbootin (flash USB drives with iso files)
-alias unetbootin='xhost local:root && sudo QT_X11_NO_MITSHM=1 /usr/bin/unetbootin'
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
