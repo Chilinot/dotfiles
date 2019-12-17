@@ -5,114 +5,112 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/home/lucas/.config/nvim/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-" Required:
-call dein#begin('/home/lucas/.config/nvim/dein')
+if dein#load_state('~/.cache/dein')
+  call dein#begin('~/.cache/dein')
 
-" Let dein manage dein
-" Required:
-call dein#add('Shougo/dein.vim')
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('Shougo/deoplete.nvim')
+  if !has('nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
 
-" Add or remove your plugins here:
-"call dein#add('Shougo/neosnippet.vim')
-"call dein#add('Shougo/neosnippet-snippets')
+  " Begin Tools ===================================
 
-" You can specify revision/branch/tag.
-"call dein#add('Shougo/neosnippet-snippets')
+  " Hilight indentation
+  "call dein#add('nathanaelkane/vim-indent-guides')
 
-" Begin Tools ===================================
+  " Terraform syntax highlight and :Terraform command
+  call dein#add('hashivim/vim-terraform')
 
-" Hilight indentation
-"call dein#add('nathanaelkane/vim-indent-guides')
+  " Unite, fuzzy search all the things!
+  call dein#add('Shougo/unite.vim')
 
-" Terraform syntax highlight and :Terraform command
-call dein#add('hashivim/vim-terraform')
+  " Rails plugin
+  call dein#add('tpope/vim-rails')
 
-" Unite, fuzzy search all the things!
-call dein#add('Shougo/unite.vim')
+  " Tagbar, list ctags in separate window
+  call dein#add('majutsushi/tagbar')
 
-" Rails plugin
-call dein#add('tpope/vim-rails')
+  " Wakatime, time logger/management
+  call dein#add('wakatime/vim-wakatime')
 
-" Tagbar, list ctags in separate window
-call dein#add('majutsushi/tagbar')
+  " Visual undo tree.
+  call dein#add('mbbill/undotree')
 
-" Wakatime, time logger/management
-call dein#add('wakatime/vim-wakatime')
+  " NerdTree
+  call dein#add('scrooloose/nerdtree')
 
-" Visual undo tree.
-call dein#add('mbbill/undotree')
+  " Airline
+  call dein#add('bling/vim-airline')
 
-" NerdTree
-call dein#add('scrooloose/nerdtree')
+  " Autoclose delimiters
+  call dein#add('Raimondi/delimitMate')
 
-" Airline
-call dein#add('bling/vim-airline')
+  " Tabular, indenting stuff with style
+  call dein#add('godlygeek/tabular')
 
-" Autoclose delimiters
-call dein#add('Raimondi/delimitMate')
+  " Git wrapper
+  call dein#add('tpope/vim-fugitive')
 
-" Tabular, indenting stuff with style
-call dein#add('godlygeek/tabular')
+  " Git - shows changes in editor
+  call dein#add('airblade/vim-gitgutter')
 
-" Git wrapper
-call dein#add('tpope/vim-fugitive')
+  " Look inside registers
+  call dein#add('junegunn/vim-peekaboo')
 
-" Git - shows changes in editor
-call dein#add('airblade/vim-gitgutter')
+  " Vimwiki - todonotes and such
+  call dein#add('vimwiki/vimwiki')
 
-" Look inside registers
-call dein#add('junegunn/vim-peekaboo')
+  " Session manager
+  call dein#add('xolox/vim-misc')    " Required for the plugin
+  call dein#add('xolox/vim-session') " The actual plugin
 
-" Vimwiki - todonotes and such
-call dein#add('vimwiki/vimwiki')
+  " Easymotion
+  call dein#add('easymotion/vim-easymotion')
 
-" Session manager
-call dein#add('xolox/vim-misc')    " Required for the plugin
-call dein#add('xolox/vim-session') " The actual plugin
+  " EditorConfig
+  "call dein#add('editorconfig/editorconfig-vim')
+  call dein#add('sgur/vim-editorconfig')
+  " End Tools =====================================
 
-" Easymotion
-call dein#add('easymotion/vim-easymotion')
+  " Begin Colorschemes ============================
+  " Lucius
+  call dein#add('jonathanfilip/vim-lucius')
 
-" EditorConfig
-"call dein#add('editorconfig/editorconfig-vim')
-call dein#add('sgur/vim-editorconfig')
-" End Tools =====================================
+  " DespaciO
+  call dein#add('alessandroyorba/despacio')
+  " End Colorschemes ==============================
 
-" Begin Colorschemes ============================
-" Lucius
-call dein#add('jonathanfilip/vim-lucius')
+  " Begin Syntax Plugins ==========================
+  " Syntastic, awesome syntax checker.
+  call dein#add('vim-syntastic/syntastic')
 
-" DespaciO
-call dein#add('alessandroyorba/despacio')
-" End Colorschemes ==============================
+  " Encore
+  call dein#add('thegrandmother/vimcore')
 
-" Begin Syntax Plugins ==========================
-" Syntastic, awesome syntax checker.
-call dein#add('vim-syntastic/syntastic')
+  " Rust
+  call dein#add('rust-lang/rust.vim')
 
-" Encore
-call dein#add('thegrandmother/vimcore')
+  " Slim, a template language for Rails
+  call dein#add('slim-template/vim-slim')
 
-" Rust
-call dein#add('rust-lang/rust.vim')
+  " CoffeScript
+  call dein#add('vim-scripts/vim-coffee-script')
 
-" Slim, a template language for Rails
-call dein#add('slim-template/vim-slim')
+  " Elm
+  call dein#add('ElmCast/elm-vim')
 
-" CoffeScript
-call dein#add('vim-scripts/vim-coffee-script')
+  " VueJS
+  "call dein#add('posva/vim-vue')
+  " End Syntax Plugins== ==========================
 
-" Elm
-call dein#add('ElmCast/elm-vim')
+  call dein#end()
+  call dein#save_state()
+endif
 
-" VueJS
-"call dein#add('posva/vim-vue')
-" End Syntax Plugins== ==========================
-
-" Required:
-call dein#end()
 
 " Required:
 filetype plugin indent on
