@@ -7,6 +7,9 @@ export ZSH=/home/lucas/.oh-my-zsh
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-syntax-highlighting rbenv capistrano docker docker-compose)
 
+# ssh
+export SSH_KEY_PATH="~/.ssh/rsa_id"
+
 export GOPATH="$HOME/.gopath"
 export PATH="$HOME/.local/bin:$HOME/.rbenv/bin:$HOME/.rbenv/plugins/ruby-build/bin:$GOPATH/bin:$HOME/.cargo/bin:$PATH"
 
@@ -26,3 +29,5 @@ export PATH="$HOME/android/platform-tools:$PATH"
 
 # Unetbootin (flash USB drives with iso files)
 alias unetbootin='xhost local:root && sudo QT_X11_NO_MITSHM=1 /usr/bin/unetbootin'
+
+alias opn='xdg-open'
