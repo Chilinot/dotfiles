@@ -175,7 +175,7 @@ nnoremap <C-K> O<Esc>
 nnoremap <C-J> o<Esc>
 
 " NERDTree
-nnoremap <F1> :NERDTree<CR>
+nnoremap <leader>f :NERDTree<CR>
 
 " Change buffer
 nnoremap <C-L> :tabnext<CR>
