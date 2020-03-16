@@ -1,0 +1,14 @@
+# Font configuration
+font:
+  # Normal (roman) font face
+  normal:
+    # Font family
+    #
+    # Default:
+    #   - (macOS) Menlo
+    #   - (Linux/BSD) monospace
+    #   - (Windows) Consolas
+    family: DejaVu Sans Mono for Powerline
+
+shell:
+  program: /bin/zsh --login
