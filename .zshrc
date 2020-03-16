@@ -73,6 +73,7 @@ export EDITOR='nvim'
 # Git
 alias gap='ga -p' # git add -p
 alias gc='git commit'
+alias gl='git log --branches --remotes --tags --graph --oneline --decorate'
 
 # General
 # - Always use nvim instead of regular vim
