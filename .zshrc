@@ -93,3 +93,9 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Stop all Docker containers
 alias dsa='docker stop $(docker ps -q)'
+
+# AWS
+export AWS_DEFAULT_REGION=eu-west-1 # Ireland
+# - Get access keys for either production or my lab account
+alias awprod='aws-jumpcloud exec prod -- true && eval "$(aws-jumpcloud export prod)"'
+alias awlab='aws-jumpcloud exec lab -- true && eval "$(aws-jumpcloud export lab)"'
