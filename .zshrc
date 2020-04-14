@@ -99,3 +99,5 @@ export AWS_DEFAULT_REGION=eu-west-1 # Ireland
 # - Get access keys for either production or my lab account
 alias awprod='aws-jumpcloud exec prod -- true && eval "$(aws-jumpcloud export prod)"'
 alias awlab='aws-jumpcloud exec lab -- true && eval "$(aws-jumpcloud export lab)"'
+# - List EC2 instances with some useful info
+alias awec2="aws ec2 describe-instances --query 'Reservations[].Instances[].{Name: Tags[?Key==\`Name\`].Value | [0], Type: InstanceType, PublicIp: PublicIpAddress, Tags: join(\`, \`, Tags[?Key != \`Name\`].[Key, Value][*].join(\`: \`, @)), PrivateIp: PrivateIpAddress }' --output table"
