@@ -13,7 +13,7 @@
 #ctrl - 0 : yabai -m space --focus 10
 
 # Terminal
-ctrl - return : open -na /System/Applications/Utilities/Terminal.app
+ctrl - return : open -na /Applications/Alacritty.app
 
 # Focus
 cmd + ctrl - h : yabai -m window --focus west

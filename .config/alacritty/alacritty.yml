@@ -10,5 +10,5 @@ font:
     #   - (Windows) Consolas
     family: DejaVu Sans Mono for Powerline
 
-shell:
-  program: /bin/zsh --login
+#shell:
+  #program: /bin/zsh --login
