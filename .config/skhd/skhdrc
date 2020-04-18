@@ -38,3 +38,6 @@ alt + ctrl - 7 : yabai -m window --space 7
 alt + ctrl - 8 : yabai -m window --space 8
 alt + ctrl - 9 : yabai -m window --space 9
 alt + ctrl - 0 : yabai -m window --space 10
+
+# Toggle window floating
+shift + ctrl - f : yabai -m window --toggle float
