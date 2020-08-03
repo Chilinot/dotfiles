@@ -119,3 +119,9 @@ setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
 # - add timestamp for each entry
 setopt EXTENDED_HISTORY
+
+# Enable bash autocompletion
+autoload -U +X bashcompinit && bashcompinit
+
+# Add Hashicorp-vault auto completions
+complete -o nospace -C /usr/local/bin/vault vault
