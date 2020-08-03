@@ -105,3 +105,17 @@ alias awlab='aws-jumpcloud exec lab -- true && eval "$(aws-jumpcloud export lab)
 alias awec2="aws ec2 describe-instances --query 'Reservations[].Instances[].{Name: Tags[?Key==\`Name\`].Value | [0], Type: InstanceType, PublicIp: PublicIpAddress, Tags: join(\`, \`, Tags[?Key != \`Name\`].[Key, Value][*].join(\`: \`, @)), PrivateIp: PrivateIpAddress }' --output table"
 alias awvpc="aws ec2 describe-vpcs --query 'Vpcs[*].{Name: Tags[?Key == \`Name\`] | [0].Value, CIDR: CidrBlock, State: State, Tags: join(\`, \`, Tags[?Key != \`Name\`].[Key, Value][*].join(\`: \`, @))}' --output table"
 alias awsub="aws ec2 describe-subnets --query 'Subnets[*].{AZ: AvailabilityZone, CIDR: CidrBlock, State: State, VPC: VpcId, Tags: join(\`, \`, Tags[?Key != \`Name\`].[Key, Value][*].join(\`: \`, @)), Name: Tags[?Key ==\`Name\`] | [0].Value}' --output table"
+
+# History
+# - set history size
+export HISTSIZE=1000000
+# - save history after logout
+export SAVEHIST=1000000
+# - history file
+export HISTFILE=~/.zhistory
+# - append into history file
+setopt INC_APPEND_HISTORY
+# - save only one command if 2 common are same and consistent
+setopt HIST_IGNORE_DUPS
+# - add timestamp for each entry
+setopt EXTENDED_HISTORY
