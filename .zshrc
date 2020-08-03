@@ -96,6 +96,8 @@ alias dsa='docker stop $(docker ps -q)'
 
 # AWS
 export AWS_DEFAULT_REGION=eu-west-1 # Ireland
+# - list active AWS keys
+alias awl='aws-jumpcloud list'
 # - Get access keys for either production or my lab account
 alias awprod='aws-jumpcloud exec prod -- true && eval "$(aws-jumpcloud export prod)"'
 alias awlab='aws-jumpcloud exec lab -- true && eval "$(aws-jumpcloud export lab)"'
