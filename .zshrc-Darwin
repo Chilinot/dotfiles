@@ -28,3 +28,7 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 # OpenJDK
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export CPPFLAGS="-I/usr/local/opt/openjdk/include"
+
+# Golang
+export GOPATH="/Users/lucas.arnstrom/go"
+export PATH="$GOPATH/bin:$PATH"
