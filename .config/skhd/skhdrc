@@ -45,3 +45,6 @@ alt + ctrl - 0 : yabai -m window --space 10
 
 # Toggle window floating
 shift + ctrl - f : yabai -m window --toggle float
+
+# Rotate window tree
+shift + ctrl - space : yabai -m space --rotate 90
