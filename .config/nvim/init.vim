@@ -22,6 +22,9 @@ if dein#load_state('~/.cache/dein')
   " Hilight indentation
   "call dein#add('nathanaelkane/vim-indent-guides')
 
+  " Kotlin lang support
+  call dein#add('udalov/kotlin-vim')
+
   " Terraform syntax highlight and :Terraform command
   call dein#add('hashivim/vim-terraform')
 
