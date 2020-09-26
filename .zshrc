@@ -95,12 +95,17 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 alias dsa='docker stop $(docker ps -q)'
 
 # AWS
-export AWS_DEFAULT_REGION=eu-west-1 # Ireland
+export AWS_DEFAULT_REGION=eu-west-1
+
 # - list active AWS keys
-alias awl='aws-jumpcloud list'
+#alias awl='aws-jumpcloud list'
+
 # - Get access keys for either production or my lab account
-alias awprod='aws-jumpcloud exec prod -- true && eval "$(aws-jumpcloud export prod)"'
-alias awlab='aws-jumpcloud exec lab -- true && eval "$(aws-jumpcloud export lab)"'
+#alias awprod='aws-jumpcloud exec prod -- true && eval "$(aws-jumpcloud export prod)"'
+alias awprod='export AWS_PROFILE=prod'
+#alias awlab='aws-jumpcloud exec lab -- true && eval "$(aws-jumpcloud export lab)"'
+alias awlab='export AWS_PROFILE=test-lucas'
+
 # - List EC2 instances with some useful info
 alias awec2="aws ec2 describe-instances --query 'Reservations[].Instances[].{Name: Tags[?Key==\`Name\`].Value | [0], Type: InstanceType, PublicIp: PublicIpAddress, Tags: join(\`, \`, Tags[?Key != \`Name\`].[Key, Value][*].join(\`: \`, @)), PrivateIp: PrivateIpAddress }' --output table"
 alias awvpc="aws ec2 describe-vpcs --query 'Vpcs[*].{Name: Tags[?Key == \`Name\`] | [0].Value, CIDR: CidrBlock, State: State, Tags: join(\`, \`, Tags[?Key != \`Name\`].[Key, Value][*].join(\`: \`, @))}' --output table"
