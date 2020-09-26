@@ -149,9 +149,9 @@ set relativenumber
 set number
 
 " Theme
-syntax enable          " Enable syntax higlight
+syntax enable " Enable syntax higlight
 colorscheme lucius
-LuciusDarkLowContrast  " Define what version of the lucius scheme to use
+LuciusLightHighContrast  " Define what version of the lucius scheme to use
 
 " Highlight tabs and trailing spaces
 set listchars=tab:\| ,trail:·
