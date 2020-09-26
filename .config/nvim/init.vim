@@ -22,6 +22,9 @@ if dein#load_state('~/.cache/dein')
   " Hilight indentation
   "call dein#add('nathanaelkane/vim-indent-guides')
 
+  " HashiCorp Configuration Language support
+  "call dein#add('jvirtanen/vim-hcl')
+
   " Kotlin lang support
   call dein#add('udalov/kotlin-vim')
 
