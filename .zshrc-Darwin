@@ -35,3 +35,7 @@ export PATH="$GOPATH/bin:$PATH"
 
 # Python
 export PATH="/usr/local/opt/python@3.8/libexec/bin:$PATH"
+
+# Terraform versions
+alias t12="/usr/local/opt/terraform@0.12/bin/terraform"
+alias t11="/usr/local/opt/terraform@0.11/bin/terraform"
