@@ -96,6 +96,9 @@ alias dsa='docker stop $(docker ps -q)'
 
 # AWS
 export AWS_DEFAULT_REGION=eu-west-1
+# - Instruct the SDK to explicitly load the aws config.
+# - Necessary to get aws-vault and terraform working when using `credential_process` in your config.
+export AWS_SDK_LOAD_CONFIG=1
 
 # - list active AWS keys
 #alias awl='aws-jumpcloud list'
