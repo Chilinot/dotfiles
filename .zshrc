@@ -111,7 +111,7 @@ alias awlab='export AWS_PROFILE=test-lucas'
 
 # - List EC2 instances with some useful info
 alias awec2="aws ec2 describe-instances --query 'Reservations[].Instances[].{Name: Tags[?Key==\`Name\`].Value | [0], ID: InstanceId, Type: InstanceType, PublicIp: PublicIpAddress, Tags: join(\`, \`, Tags[?Key != \`Name\`].[Key, Value][*].join(\`: \`, @)), PrivateIp: PrivateIpAddress }' --output table"
-alias awvpc="aws ec2 describe-vpcs --query 'Vpcs[*].{Name: Tags[?Key == \`Name\`] | [0].Value, CIDR: CidrBlock, State: State, Tags: join(\`, \`, Tags[?Key != \`Name\`].[Key, Value][*].join(\`: \`, @))}' --output table"
+alias awvpc="aws ec2 describe-vpcs --query 'Vpcs[*].{ID: VpcId, Name: Tags[?Key == \`Name\`] | [0].Value, CIDR: CidrBlock, State: State, Tags: join(\`, \`, Tags[?Key != \`Name\`].[Key, Value][*].join(\`: \`, @))}' --output table"
 alias awsub="aws ec2 describe-subnets --query 'Subnets[*].{AZ: AvailabilityZone, CIDR: CidrBlock, State: State, VPC: VpcId, Tags: join(\`, \`, Tags[?Key != \`Name\`].[Key, Value][*].join(\`: \`, @)), Name: Tags[?Key ==\`Name\`] | [0].Value}' --output table"
 
 # History
