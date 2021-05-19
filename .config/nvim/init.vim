@@ -23,13 +23,13 @@ if dein#load_state('~/.cache/dein')
   "call dein#add('nathanaelkane/vim-indent-guides')
 
   " HashiCorp Configuration Language support
-  "call dein#add('jvirtanen/vim-hcl')
+  call dein#add('jvirtanen/vim-hcl')
 
   " Kotlin lang support
   call dein#add('udalov/kotlin-vim')
 
   " Terraform syntax highlight and :Terraform command
-  call dein#add('hashivim/vim-terraform')
+  "call dein#add('hashivim/vim-terraform')
 
   " Unite, fuzzy search all the things!
   call dein#add('Shougo/unite.vim')
