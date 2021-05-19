@@ -40,6 +40,7 @@ export PATH="/usr/local/opt/python@3.8/libexec/bin:$PATH"
 alias t11="/usr/local/opt/terraform@0.11/bin/terraform"
 alias t12="/usr/local/opt/terraform@0.12/bin/terraform"
 alias t13='/usr/local/opt/terraform@0.13/bin/terraform'
+alias t14='/usr/local/opt/terraform@0.14/bin/terraform'
 
 # Custom binaries
 export PATH="/Users/lucas.arnstrom/.bin:$PATH"
